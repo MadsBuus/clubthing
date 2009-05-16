@@ -82,4 +82,11 @@ class AccountsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def recalc_total
+    @account = Account.find(params[:id])
+    @account.recalc_total
+    @account.save
+    redirect_to @account.client
+  end  
 end

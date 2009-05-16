@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :clients do |c|
-    c.resources :accounts do |a|
+    c.resources :accounts, :member => { :recalc_total => :get} do |a|
       a.resources :lines
     end
   end

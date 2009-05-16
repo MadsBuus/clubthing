@@ -9,7 +9,10 @@ class LinesController < ApplicationController
   # POST /lines
   # POST /lines.xml
   def create
+    amount = params[:line][:amount].strip
+    amount = - amount.to_i unless amount.include? "+"       
     @line = Line.new(params[:line])
+    @line.amount = amount
     deposit(@line)
     redirect_to(@line.account.client)
   end

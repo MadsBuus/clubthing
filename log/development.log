@@ -16329,3 +16329,1851 @@ Processing Rails::InfoController#properties (for 127.0.0.1 at 2009-05-10 16:35:3
 [0m
   [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
 Completed in 37ms (View: 2, DB: 1) | 200 OK [http://0.0.0.0/rails/info/properties]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2009-05-16 13:00:01) [GET]
+  [4;36;1mClient Load (2.0ms)[0m   [0;1mSELECT * FROM "clients" ORDER BY klass, name[0m
+Rendering template within layouts/clients
+Rendering clients/index
+Rendered clients/_finder (1.4ms)
+Completed in 36ms (View: 21, DB: 2) | 200 OK [http://0.0.0.0/clients]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2009-05-16 23:38:54) [GET]
+  [4;35;1mClient Load (1.2ms)[0m   [0mSELECT * FROM "clients" ORDER BY klass, name[0m
+Rendering template within layouts/clients
+Rendering clients/index
+Rendered clients/_finder (0.5ms)
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/clients]
+
+
+Processing ClientsController#auto_complete_for_client_name (for 127.0.0.1 at 2009-05-16 23:39:18) [POST]
+  Parameters: {"client"=>{"name"=>"Mil"}}
+  [4;36;1mClient Load (0.4ms)[0m   [0;1mSELECT * FROM "clients" WHERE (name like '%Mil%') [0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 3) [0m
+Rendering clients/auto_complete_for_client_name
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+Completed in 26ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/clients/auto_complete_for_client_name]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2009-05-16 23:39:20) [GET]
+  Parameters: {"commit"=>"skift", "client"=>{"name"=>"Mila Buus Westmark"}}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."name" = 'Mila Buus Westmark') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/clients/3
+Completed in 5ms (DB: 0) | 302 Found [http://0.0.0.0/clients?client%5Bname%5D=Mila+Buus+Westmark&commit=skift]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-16 23:39:20) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 3) [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 3) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.8ms)
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+Rendered lines/_line (2.2ms)
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Completed in 75ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/clients/3]
+
+
+Processing LinesController#index (for 127.0.0.1 at 2009-05-16 23:39:39) [GET]
+  Parameters: {"account_id"=>"8", "client_id"=>"3"}
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 3) [0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 8) [0m
+  [4;35;1mLine Load (0.2ms)[0m   [0mSELECT "lines".* FROM "lines" WHERE ("lines".account_id = 8) [0m
+Rendering template within layouts/application
+Rendering lines/index
+Completed in 60ms (View: 49, DB: 0) | 200 OK [http://0.0.0.0/clients/3/accounts/8/lines]
+
+
+Processing LinesController#index (for 127.0.0.1 at 2009-05-16 23:39:49) [GET]
+  Parameters: {"account_id"=>"7", "client_id"=>"3"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 3) [0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 7) [0m
+  [4;36;1mLine Load (0.2ms)[0m   [0;1mSELECT "lines".* FROM "lines" WHERE ("lines".account_id = 7) [0m
+Rendering template within layouts/application
+Rendering lines/index
+Completed in 13ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/clients/3/accounts/7/lines]
+
+
+Processing LinesController#index (for 127.0.0.1 at 2009-05-16 23:39:54) [GET]
+  Parameters: {"account_id"=>"9", "client_id"=>"3"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 3) [0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 9) [0m
+  [4;35;1mLine Load (0.6ms)[0m   [0mSELECT "lines".* FROM "lines" WHERE ("lines".account_id = 9) [0m
+Rendering template within layouts/application
+Rendering lines/index
+Completed in 15ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/clients/3/accounts/9/lines]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-16 23:40:11) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 3) [0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 3) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+Rendered lines/_line (1.4ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Completed in 65ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/clients/3]
+
+
+Processing LinesController#index (for 127.0.0.1 at 2009-05-16 23:40:13) [GET]
+  Parameters: {"account_id"=>"8", "client_id"=>"3"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 3) [0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 8) [0m
+  [4;35;1mLine Load (0.2ms)[0m   [0mSELECT "lines".* FROM "lines" WHERE ("lines".account_id = 8) [0m
+Rendering template within layouts/application
+Rendering lines/index
+Completed in 13ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/clients/3/accounts/8/lines]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-16 23:47:17) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 3) [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 3) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+Rendered lines/_line (1.4ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Completed in 21ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/clients/3]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-16 23:47:19) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 3) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 3) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+Rendered lines/_line (1.3ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Completed in 19ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/clients/3]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-16 23:53:09) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 3) [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 3) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+Rendered lines/_line (1.4ms)
+Rendered accounts/_cashregister (3.7ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.8ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.8ms)
+Completed in 25ms (View: 14, DB: 1) | 200 OK [http://0.0.0.0/clients/3]
+
+
+Processing LinesController#index (for 127.0.0.1 at 2009-05-16 23:53:17) [GET]
+  Parameters: {"account_id"=>"9", "client_id"=>"3"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 3) [0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 9) [0m
+  [4;35;1mLine Load (0.6ms)[0m   [0mSELECT "lines".* FROM "lines" WHERE ("lines".account_id = 9) [0m
+Rendering template within layouts/application
+Rendering lines/index
+Completed in 14ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/clients/3/accounts/9/lines]
+
+
+Processing LinesController#index (for 127.0.0.1 at 2009-05-16 23:53:22) [GET]
+  Parameters: {"account_id"=>"8", "client_id"=>"3"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 3) [0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 8) [0m
+  [4;36;1mLine Load (0.2ms)[0m   [0;1mSELECT "lines".* FROM "lines" WHERE ("lines".account_id = 8) [0m
+Rendering template within layouts/application
+Rendering lines/index
+Completed in 13ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/clients/3/accounts/8/lines]
+
+
+Processing LinesController#create (for 127.0.0.1 at 2009-05-16 23:53:27) [POST]
+  Parameters: {"line"=>{"amount"=>"-10", "account_id"=>"8"}, "authenticity_token"=>"7iwol4c4u/PyZzNDyMqNCJg/L4h7C1ImBQcNJtS2Tzs="}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 8) [0m
+  [4;36;1mLine Create (0.4ms)[0m   [0;1mINSERT INTO "lines" ("comment", "created_at", "updated_at", "account_id", "amount") VALUES(NULL, '2009-05-16 21:53:27', '2009-05-16 21:53:27', 8, -10)[0m
+  [4;35;1mAccount Update (0.1ms)[0m   [0mUPDATE "accounts" SET "total" = 90, "updated_at" = '2009-05-16 21:53:27' WHERE "id" = 8[0m
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 3) [0m
+Redirected to http://0.0.0.0:3000/clients/3
+Completed in 15ms (DB: 1) | 302 Found [http://0.0.0.0/lines]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-16 23:53:27) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 3) [0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 3) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+Rendered lines/_line (1.3ms)
+Rendered accounts/_cashregister (3.1ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+Rendered lines/_line (1.3ms)
+Rendered accounts/_cashregister (3.2ms)
+Completed in 21ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/clients/3]
+
+
+Processing LinesController#index (for 127.0.0.1 at 2009-05-16 23:53:30) [GET]
+  Parameters: {"account_id"=>"8", "client_id"=>"3"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 3) [0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 8) [0m
+  [4;36;1mLine Load (0.2ms)[0m   [0;1mSELECT "lines".* FROM "lines" WHERE ("lines".account_id = 8) [0m
+Rendering template within layouts/application
+Rendering lines/index
+Completed in 13ms (View: 2, DB: 1) | 200 OK [http://0.0.0.0/clients/3/accounts/8/lines]
+
+
+Processing ClientsController#auto_complete_for_client_name (for 127.0.0.1 at 2009-05-16 23:53:37) [POST]
+  Parameters: {"client"=>{"name"=>"M"}}
+  [4;35;1mClient Load (0.5ms)[0m   [0mSELECT * FROM "clients" WHERE (name like '%M%') [0m
+  [4;36;1mAccount Load (0.7ms)[0m   [0;1mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id IN (1,2,3,4)) [0m
+Rendering clients/auto_complete_for_client_name
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 1) LIMIT 1[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 4) LIMIT 1[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 4) LIMIT 1[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 4) LIMIT 1[0m
+Completed in 17ms (View: 5, DB: 3) | 200 OK [http://0.0.0.0/clients/auto_complete_for_client_name]
+
+
+Processing ClientsController#auto_complete_for_client_name (for 127.0.0.1 at 2009-05-16 23:53:37) [POST]
+  Parameters: {"client"=>{"name"=>"Ma"}}
+  [4;35;1mClient Load (0.5ms)[0m   [0mSELECT * FROM "clients" WHERE (name like '%Ma%') [0m
+  [4;36;1mAccount Load (0.6ms)[0m   [0;1mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id IN (1,3,4)) [0m
+Rendering clients/auto_complete_for_client_name
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 1) LIMIT 1[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 4) LIMIT 1[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 4) LIMIT 1[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 4) LIMIT 1[0m
+Completed in 15ms (View: 4, DB: 2) | 200 OK [http://0.0.0.0/clients/auto_complete_for_client_name]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2009-05-16 23:53:38) [GET]
+  Parameters: {"client"=>{"name"=>"Mads Buus Westmark"}}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."name" = 'Mads Buus Westmark') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/clients/1
+Completed in 5ms (DB: 0) | 302 Found [http://0.0.0.0/clients?client%5Bname%5D=Mads+Buus+Westmark]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-16 23:53:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 1) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 1) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 1) LIMIT 1[0m
+Rendered lines/_line (1.4ms)
+Rendered accounts/_cashregister (3.5ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 1) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 1) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/clients/1]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-16 23:54:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 1) [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 1) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 1) LIMIT 1[0m
+Rendered lines/_line (1.5ms)
+Rendered accounts/_cashregister (3.6ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 1) LIMIT 1[0m
+Rendered lines/_line (0.5ms)
+Rendered accounts/_cashregister (2.1ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 1) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+Completed in 22ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/clients/1]
+
+
+Processing ClientsController#auto_complete_for_client_name (for 127.0.0.1 at 2009-05-16 23:54:55) [POST]
+  Parameters: {"client"=>{"name"=>"I"}}
+  [4;35;1mClient Load (0.5ms)[0m   [0mSELECT * FROM "clients" WHERE (name like '%I%') [0m
+  [4;36;1mAccount Load (0.5ms)[0m   [0;1mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id IN (2,3,4)) [0m
+Rendering clients/auto_complete_for_client_name
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 4) LIMIT 1[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 4) LIMIT 1[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 4) LIMIT 1[0m
+Completed in 15ms (View: 4, DB: 2) | 200 OK [http://0.0.0.0/clients/auto_complete_for_client_name]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2009-05-16 23:54:56) [GET]
+  Parameters: {"client"=>{"name"=>"Ida Holme Nienstædt"}}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."name" = 'Ida Holme Nienstædt') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/clients/2
+Completed in 5ms (DB: 0) | 302 Found [http://0.0.0.0/clients?client%5Bname%5D=Ida+Holme+Nienst%C3%A6dt]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-16 23:54:57) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.4ms)
+Rendered accounts/_cashregister (3.2ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.5ms)
+Rendered accounts/_cashregister (2.0ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (2.0ms)
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:04:39) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+
+SyntaxError (/Users/mads/dev/clubthing/app/models/line.rb:5: syntax error, unexpected '\n', expecting tASSOC):
+  app/controllers/clients_controller.rb:41:in `show'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (30.4ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:05:16) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+
+SyntaxError (/Users/mads/dev/clubthing/app/models/line.rb:4: syntax error, unexpected '\n', expecting tASSOC):
+  app/controllers/clients_controller.rb:41:in `show'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:05:41) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.8ms)
+Rendered accounts/_cashregister (5.0ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (2.0ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+Completed in 22ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:06:05) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.8ms)
+Rendered accounts/_cashregister (5.1ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+Completed in 22ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:06:06) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.5ms)
+Rendered accounts/_cashregister (3.5ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.8ms)
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:06:12) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.8ms)
+Rendered accounts/_cashregister (5.2ms)
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.5ms)
+Rendered accounts/_cashregister (40.4ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (2.0ms)
+Completed in 61ms (View: 49, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:06:13) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.5ms)
+Rendered accounts/_cashregister (3.3ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.8ms)
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:06:17) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.7ms)
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.5ms)
+Rendered accounts/_cashregister (3.5ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+Completed in 62ms (View: 50, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:06:18) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.3ms)
+Rendered accounts/_cashregister (3.1ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.8ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.8ms)
+Completed in 20ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:06:21) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.8ms)
+Rendered accounts/_cashregister (5.1ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (2.0ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+Completed in 62ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:07:04) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.9ms)
+Rendered accounts/_cashregister (5.0ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.8ms)
+Completed in 22ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:07:22) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.8ms)
+Rendered accounts/_cashregister (5.1ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.5ms)
+Rendered accounts/_cashregister (1.9ms)
+Completed in 22ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:07:29) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.9ms)
+Rendered accounts/_cashregister (6.1ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (2.0ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+Completed in 24ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing LinesController#create (for 127.0.0.1 at 2009-05-17 00:07:33) [POST]
+  Parameters: {"line"=>{"amount"=>"60", "account_id"=>"4"}, "authenticity_token"=>"7iwol4c4u/PyZzNDyMqNCJg/L4h7C1ImBQcNJtS2Tzs="}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 4) [0m
+  [4;36;1mLine Create (0.3ms)[0m   [0;1mINSERT INTO "lines" ("comment", "created_at", "updated_at", "account_id", "amount") VALUES(NULL, '2009-05-16 22:07:33', '2009-05-16 22:07:33', 4, 60)[0m
+  [4;35;1mAccount Update (0.1ms)[0m   [0mUPDATE "accounts" SET "total" = 10, "updated_at" = '2009-05-16 22:07:33' WHERE "id" = 4[0m
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+Redirected to http://0.0.0.0:3000/clients/2
+Completed in 15ms (DB: 1) | 302 Found [http://0.0.0.0/lines]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:07:33) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.4ms)
+Rendered accounts/_cashregister (3.1ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.5ms)
+Rendered accounts/_cashregister (2.0ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.7ms)
+Rendered accounts/_cashregister (2.9ms)
+Completed in 21ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing LinesController#create (for 127.0.0.1 at 2009-05-17 00:07:40) [POST]
+  Parameters: {"line"=>{"amount"=>"+10", "account_id"=>"4"}, "authenticity_token"=>"7iwol4c4u/PyZzNDyMqNCJg/L4h7C1ImBQcNJtS2Tzs="}
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 4) [0m
+  [4;35;1mLine Create (0.5ms)[0m   [0mINSERT INTO "lines" ("comment", "created_at", "updated_at", "account_id", "amount") VALUES(NULL, '2009-05-16 22:07:40', '2009-05-16 22:07:40', 4, 10)[0m
+  [4;36;1mAccount Update (0.1ms)[0m   [0;1mUPDATE "accounts" SET "total" = 0, "updated_at" = '2009-05-16 22:07:40' WHERE "id" = 4[0m
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+Redirected to http://0.0.0.0:3000/clients/2
+Completed in 15ms (DB: 1) | 302 Found [http://0.0.0.0/lines]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:07:40) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.4ms)
+Rendered accounts/_cashregister (3.2ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (2.0ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing LinesController#create (for 127.0.0.1 at 2009-05-17 00:07:54) [POST]
+  Parameters: {"line"=>{"amount"=>"+10", "account_id"=>"5"}, "authenticity_token"=>"7iwol4c4u/PyZzNDyMqNCJg/L4h7C1ImBQcNJtS2Tzs="}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) [0m
+  [4;36;1mLine Create (0.3ms)[0m   [0;1mINSERT INTO "lines" ("comment", "created_at", "updated_at", "account_id", "amount") VALUES(NULL, '2009-05-16 22:07:54', '2009-05-16 22:07:54', 5, 10)[0m
+  [4;35;1mAccount Update (0.1ms)[0m   [0mUPDATE "accounts" SET "total" = 88, "updated_at" = '2009-05-16 22:07:54' WHERE "id" = 5[0m
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+Redirected to http://0.0.0.0:3000/clients/2
+Completed in 15ms (DB: 1) | 302 Found [http://0.0.0.0/lines]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:07:54) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.4ms)
+Rendered accounts/_cashregister (3.3ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (2.0ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+Completed in 21ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing LinesController#create (for 127.0.0.1 at 2009-05-17 00:08:00) [POST]
+  Parameters: {"line"=>{"amount"=>"abc", "account_id"=>"5"}, "authenticity_token"=>"7iwol4c4u/PyZzNDyMqNCJg/L4h7C1ImBQcNJtS2Tzs="}
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) [0m
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+Redirected to http://0.0.0.0:3000/clients/2
+Completed in 14ms (DB: 0) | 302 Found [http://0.0.0.0/lines]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:08:00) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.4ms)
+Rendered accounts/_cashregister (3.2ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.5ms)
+Rendered accounts/_cashregister (2.0ms)
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing LinesController#create (for 127.0.0.1 at 2009-05-17 00:08:05) [POST]
+  Parameters: {"line"=>{"amount"=>"ASDASD", "account_id"=>"5"}, "authenticity_token"=>"7iwol4c4u/PyZzNDyMqNCJg/L4h7C1ImBQcNJtS2Tzs="}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) [0m
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+Redirected to http://0.0.0.0:3000/clients/2
+Completed in 14ms (DB: 0) | 302 Found [http://0.0.0.0/lines]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:08:05) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.3ms)
+Rendered accounts/_cashregister (3.1ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.8ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+Completed in 19ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing LinesController#create (for 127.0.0.1 at 2009-05-17 00:12:37) [POST]
+  Parameters: {"line"=>{"amount"=>"-10", "account_id"=>"5"}, "authenticity_token"=>"7iwol4c4u/PyZzNDyMqNCJg/L4h7C1ImBQcNJtS2Tzs="}
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) [0m
+  [4;35;1mLine Create (0.3ms)[0m   [0mINSERT INTO "lines" ("comment", "created_at", "updated_at", "account_id", "amount") VALUES(NULL, '2009-05-16 22:12:37', '2009-05-16 22:12:37', 5, -10)[0m
+  [4;36;1mAccount Update (0.1ms)[0m   [0;1mUPDATE "accounts" SET "total" = 98, "updated_at" = '2009-05-16 22:12:37' WHERE "id" = 5[0m
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+Redirected to http://0.0.0.0:3000/clients/2
+Completed in 65ms (DB: 1) | 302 Found [http://0.0.0.0/lines]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:12:37) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.4ms)
+Rendered accounts/_cashregister (3.2ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.5ms)
+Rendered accounts/_cashregister (2.1ms)
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:27:14) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.4ms)
+Rendered accounts/_cashregister (3.5ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.8ms)
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:27:19) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.4ms)
+Rendered accounts/_cashregister (3.3ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.5ms)
+Rendered accounts/_cashregister (44.1ms)
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (2.0ms)
+Completed in 64ms (View: 51, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing LinesController#create (for 127.0.0.1 at 2009-05-17 00:27:24) [POST]
+  Parameters: {"line"=>{"amount"=>"+10", "account_id"=>"5"}, "authenticity_token"=>"7iwol4c4u/PyZzNDyMqNCJg/L4h7C1ImBQcNJtS2Tzs="}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) [0m
+  [4;36;1mLine Create (0.3ms)[0m   [0;1mINSERT INTO "lines" ("comment", "created_at", "updated_at", "account_id", "amount") VALUES(NULL, '2009-05-16 22:27:24', '2009-05-16 22:27:24', 5, 10)[0m
+  [4;35;1mAccount Update (0.1ms)[0m   [0mUPDATE "accounts" SET "total" = 108, "updated_at" = '2009-05-16 22:27:24' WHERE "id" = 5[0m
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+Redirected to http://0.0.0.0:3000/clients/2
+Completed in 16ms (DB: 1) | 302 Found [http://0.0.0.0/lines]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:27:25) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.4ms)
+Rendered accounts/_cashregister (3.2ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.6ms)
+Rendered accounts/_cashregister (2.8ms)
+Completed in 21ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing LinesController#create (for 127.0.0.1 at 2009-05-17 00:27:27) [POST]
+  Parameters: {"line"=>{"amount"=>"10", "account_id"=>"5"}, "authenticity_token"=>"7iwol4c4u/PyZzNDyMqNCJg/L4h7C1ImBQcNJtS2Tzs="}
+
+NoMethodError (undefined method `-@' for "10":String):
+  app/controllers/lines_controller.rb:13:in `create'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (68.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LinesController#create (for 127.0.0.1 at 2009-05-17 00:28:55) [POST]
+  Parameters: {"line"=>{"amount"=>"10", "account_id"=>"5"}, "authenticity_token"=>"7iwol4c4u/PyZzNDyMqNCJg/L4h7C1ImBQcNJtS2Tzs="}
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) [0m
+  [4;35;1mLine Create (0.4ms)[0m   [0mINSERT INTO "lines" ("comment", "created_at", "updated_at", "account_id", "amount") VALUES(NULL, '2009-05-16 22:28:55', '2009-05-16 22:28:55', 5, -10)[0m
+  [4;36;1mAccount Update (0.1ms)[0m   [0;1mUPDATE "accounts" SET "total" = 98, "updated_at" = '2009-05-16 22:28:55' WHERE "id" = 5[0m
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+Redirected to http://0.0.0.0:3000/clients/2
+Completed in 20ms (DB: 1) | 302 Found [http://0.0.0.0/lines]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:28:55) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.3ms)
+Rendered accounts/_cashregister (3.2ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.8ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.8ms)
+Completed in 20ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing LinesController#create (for 127.0.0.1 at 2009-05-17 00:29:00) [POST]
+  Parameters: {"line"=>{"amount"=>"10", "account_id"=>"5"}, "authenticity_token"=>"7iwol4c4u/PyZzNDyMqNCJg/L4h7C1ImBQcNJtS2Tzs="}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) [0m
+  [4;36;1mLine Create (0.3ms)[0m   [0;1mINSERT INTO "lines" ("comment", "created_at", "updated_at", "account_id", "amount") VALUES(NULL, '2009-05-16 22:29:00', '2009-05-16 22:29:00', 5, -10)[0m
+  [4;35;1mAccount Update (0.1ms)[0m   [0mUPDATE "accounts" SET "total" = 88, "updated_at" = '2009-05-16 22:29:00' WHERE "id" = 5[0m
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+Redirected to http://0.0.0.0:3000/clients/2
+Completed in 15ms (DB: 1) | 302 Found [http://0.0.0.0/lines]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:29:00) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.4ms)
+Rendered accounts/_cashregister (3.4ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+Completed in 69ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing LinesController#create (for 127.0.0.1 at 2009-05-17 00:29:06) [POST]
+  Parameters: {"line"=>{"amount"=>"+10", "account_id"=>"5"}, "authenticity_token"=>"7iwol4c4u/PyZzNDyMqNCJg/L4h7C1ImBQcNJtS2Tzs="}
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) [0m
+  [4;35;1mLine Create (0.3ms)[0m   [0mINSERT INTO "lines" ("comment", "created_at", "updated_at", "account_id", "amount") VALUES(NULL, '2009-05-16 22:29:06', '2009-05-16 22:29:06', 5, 10)[0m
+  [4;36;1mAccount Update (0.1ms)[0m   [0;1mUPDATE "accounts" SET "total" = 98, "updated_at" = '2009-05-16 22:29:06' WHERE "id" = 5[0m
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+Redirected to http://0.0.0.0:3000/clients/2
+Completed in 15ms (DB: 1) | 302 Found [http://0.0.0.0/lines]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:29:06) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.3ms)
+Rendered accounts/_cashregister (3.1ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.5ms)
+Rendered accounts/_cashregister (2.0ms)
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing LinesController#create (for 127.0.0.1 at 2009-05-17 00:29:19) [POST]
+  Parameters: {"line"=>{"amount"=>"+100", "account_id"=>"4"}, "authenticity_token"=>"7iwol4c4u/PyZzNDyMqNCJg/L4h7C1ImBQcNJtS2Tzs="}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 4) [0m
+  [4;36;1mLine Create (0.3ms)[0m   [0;1mINSERT INTO "lines" ("comment", "created_at", "updated_at", "account_id", "amount") VALUES(NULL, '2009-05-16 22:29:19', '2009-05-16 22:29:19', 4, 100)[0m
+  [4;35;1mAccount Update (0.1ms)[0m   [0mUPDATE "accounts" SET "total" = 100, "updated_at" = '2009-05-16 22:29:19' WHERE "id" = 4[0m
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+Redirected to http://0.0.0.0:3000/clients/2
+Completed in 15ms (DB: 1) | 302 Found [http://0.0.0.0/lines]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:29:19) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.4ms)
+Rendered accounts/_cashregister (3.1ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (2.1ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.6ms)
+Rendered accounts/_cashregister (2.5ms)
+Completed in 21ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing LinesController#index (for 127.0.0.1 at 2009-05-17 00:29:59) [GET]
+  Parameters: {"account_id"=>"5", "client_id"=>"2"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) [0m
+  [4;36;1mLine Load (0.5ms)[0m   [0;1mSELECT "lines".* FROM "lines" WHERE ("lines".account_id = 5) [0m
+Rendering template within layouts/application
+Rendering lines/index
+Completed in 14ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/clients/2/accounts/5/lines]
+
+
+Processing LinesController#index (for 127.0.0.1 at 2009-05-17 00:30:22) [GET]
+  Parameters: {"account_id"=>"6", "client_id"=>"2"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 6) [0m
+  [4;35;1mLine Load (0.2ms)[0m   [0mSELECT "lines".* FROM "lines" WHERE ("lines".account_id = 6) [0m
+Rendering template within layouts/application
+Rendering lines/index
+Completed in 13ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/clients/2/accounts/6/lines]
+
+
+Processing LinesController#create (for 127.0.0.1 at 2009-05-17 00:30:31) [POST]
+  Parameters: {"line"=>{"amount"=>"30", "account_id"=>"6"}, "authenticity_token"=>"7iwol4c4u/PyZzNDyMqNCJg/L4h7C1ImBQcNJtS2Tzs="}
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 6) [0m
+  [4;35;1mLine Create (0.3ms)[0m   [0mINSERT INTO "lines" ("comment", "created_at", "updated_at", "account_id", "amount") VALUES(NULL, '2009-05-16 22:30:31', '2009-05-16 22:30:31', 6, -30)[0m
+  [4;36;1mAccount Update (0.1ms)[0m   [0;1mUPDATE "accounts" SET "total" = 20, "updated_at" = '2009-05-16 22:30:31' WHERE "id" = 6[0m
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+Redirected to http://0.0.0.0:3000/clients/2
+Completed in 15ms (DB: 1) | 302 Found [http://0.0.0.0/lines]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:30:31) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.4ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.3ms)
+Rendered accounts/_cashregister (3.1ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.6ms)
+Rendered accounts/_cashregister (2.6ms)
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing LinesController#create (for 127.0.0.1 at 2009-05-17 00:30:35) [POST]
+  Parameters: {"line"=>{"amount"=>"+100", "account_id"=>"6"}, "authenticity_token"=>"7iwol4c4u/PyZzNDyMqNCJg/L4h7C1ImBQcNJtS2Tzs="}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 6) [0m
+  [4;36;1mLine Create (0.3ms)[0m   [0;1mINSERT INTO "lines" ("comment", "created_at", "updated_at", "account_id", "amount") VALUES(NULL, '2009-05-16 22:30:35', '2009-05-16 22:30:35', 6, 100)[0m
+  [4;35;1mAccount Update (0.1ms)[0m   [0mUPDATE "accounts" SET "total" = 120, "updated_at" = '2009-05-16 22:30:35' WHERE "id" = 6[0m
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+Redirected to http://0.0.0.0:3000/clients/2
+Completed in 15ms (DB: 1) | 302 Found [http://0.0.0.0/lines]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:30:35) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.3ms)
+Rendered accounts/_cashregister (3.2ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.8ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.1ms)
+Rendered accounts/_cashregister (2.6ms)
+Completed in 21ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing LinesController#index (for 127.0.0.1 at 2009-05-17 00:30:38) [GET]
+  Parameters: {"account_id"=>"6", "client_id"=>"2"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 6) [0m
+  [4;36;1mLine Load (0.3ms)[0m   [0;1mSELECT "lines".* FROM "lines" WHERE ("lines".account_id = 6) [0m
+Rendering template within layouts/application
+Rendering lines/index
+Completed in 13ms (View: 2, DB: 1) | 200 OK [http://0.0.0.0/clients/2/accounts/6/lines]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:30:44) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.4ms)
+Rendered accounts/_cashregister (3.2ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (2.0ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing LinesController#create (for 127.0.0.1 at 2009-05-17 00:30:47) [POST]
+  Parameters: {"line"=>{"amount"=>"sdskdasæ", "account_id"=>"4"}, "authenticity_token"=>"7iwol4c4u/PyZzNDyMqNCJg/L4h7C1ImBQcNJtS2Tzs="}
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 4) [0m
+  [4;35;1mLine Create (0.3ms)[0m   [0mINSERT INTO "lines" ("comment", "created_at", "updated_at", "account_id", "amount") VALUES(NULL, '2009-05-16 22:30:47', '2009-05-16 22:30:47', 4, 0)[0m
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+Redirected to http://0.0.0.0:3000/clients/2
+Completed in 14ms (DB: 1) | 302 Found [http://0.0.0.0/lines]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:30:47) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.3ms)
+Rendered accounts/_cashregister (3.1ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.8ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.6ms)
+Rendered accounts/_cashregister (2.6ms)
+Completed in 20ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:31:47) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.3ms)
+Rendered accounts/_cashregister (3.1ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.8ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.8ms)
+Completed in 19ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing LinesController#create (for 127.0.0.1 at 2009-05-17 00:31:58) [POST]
+  Parameters: {"line"=>{"amount"=>"10", "account_id"=>"4"}, "authenticity_token"=>"7iwol4c4u/PyZzNDyMqNCJg/L4h7C1ImBQcNJtS2Tzs="}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 4) [0m
+  [4;36;1mLine Create (0.3ms)[0m   [0;1mINSERT INTO "lines" ("comment", "created_at", "updated_at", "account_id", "amount") VALUES(NULL, '2009-05-16 22:31:58', '2009-05-16 22:31:58', 4, -10)[0m
+  [4;35;1mAccount Update (0.1ms)[0m   [0mUPDATE "accounts" SET "total" = 90, "updated_at" = '2009-05-16 22:31:58' WHERE "id" = 4[0m
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+Redirected to http://0.0.0.0:3000/clients/2
+Completed in 15ms (DB: 1) | 302 Found [http://0.0.0.0/lines]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:31:58) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.5ms)
+Rendered accounts/_cashregister (3.4ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing LinesController#index (for 127.0.0.1 at 2009-05-17 00:39:22) [GET]
+  Parameters: {"account_id"=>"4", "client_id"=>"2"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 4) [0m
+  [4;36;1mLine Load (0.4ms)[0m   [0;1mSELECT "lines".* FROM "lines" WHERE ("lines".account_id = 4) [0m
+Rendering template within layouts/application
+Rendering lines/index
+Completed in 14ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/clients/2/accounts/4/lines]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-17 00:39:34) [GET]
+
+ActionController::RoutingError (No route matches "/clients/2/accounts/4/recalc_totals" with {:method=>:get}):
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#recalc_total (for 127.0.0.1 at 2009-05-17 00:43:04) [GET]
+  Parameters: {"id"=>"4", "client_id"=>"2"}
+
+NameError (undefined local variable or method `s' for main:Object):
+  app/controllers/accounts_controller.rb:93
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (22.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AccountsController#recalc_total (for 127.0.0.1 at 2009-05-17 00:43:27) [GET]
+  Parameters: {"id"=>"4", "client_id"=>"2"}
+
+ActionController::UnknownAction (No action responded to recalc_total. Actions: create, destroy, edit, index, new, recalc_totals, show, and update):
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing AccountsController#recalc_total (for 127.0.0.1 at 2009-05-17 00:44:00) [GET]
+  Parameters: {"id"=>"4", "client_id"=>"2"}
+
+NameError (undefined local variable or method `lines' for #<AccountsController:0x26e3654>):
+  app/controllers/accounts_controller.rb:87:in `recalc_total'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (23.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AccountsController#recalc_total (for 127.0.0.1 at 2009-05-17 00:45:42) [GET]
+  Parameters: {"id"=>"4", "client_id"=>"2"}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 4) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT sum("lines".amount) AS sum_amount FROM "lines" WHERE ("lines".account_id = 4) [0m
+
+NameError (undefined local variable or method `log' for #<Account:0x25656ec>):
+  app/models/account.rb:7:in `recalc_total'
+  app/controllers/accounts_controller.rb:88:in `recalc_total'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (24.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AccountsController#recalc_total (for 127.0.0.1 at 2009-05-17 00:46:02) [GET]
+  Parameters: {"id"=>"4", "client_id"=>"2"}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 4) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT sum("lines".amount) AS sum_amount FROM "lines" WHERE ("lines".account_id = 4) [0m
+wrong total! 90, should be 230. Updated.
+
+ActionView::MissingTemplate (Missing template accounts/recalc_total.erb in view path app/views):
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AccountsController#recalc_total (for 127.0.0.1 at 2009-05-17 00:47:17) [GET]
+  Parameters: {"id"=>"4", "client_id"=>"2"}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 4) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT sum("lines".amount) AS sum_amount FROM "lines" WHERE ("lines".account_id = 4) [0m
+wrong total! 90, should be 230. Updated.
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+Redirected to http://0.0.0.0:3000/clients/2
+Completed in 12ms (DB: 0) | 302 Found [http://0.0.0.0/clients/2/accounts/4/recalc_total]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:47:17) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.7ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.4ms)
+Rendered accounts/_cashregister (3.3ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.9ms)
+Rendered accounts/_cashregister (2.5ms)
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.6ms)
+Rendered accounts/_cashregister (2.7ms)
+Completed in 23ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing LinesController#index (for 127.0.0.1 at 2009-05-17 00:47:22) [GET]
+  Parameters: {"account_id"=>"4", "client_id"=>"2"}
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 4) [0m
+  [4;35;1mLine Load (0.4ms)[0m   [0mSELECT "lines".* FROM "lines" WHERE ("lines".account_id = 4) [0m
+Rendering template within layouts/application
+Rendering lines/index
+Completed in 14ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/clients/2/accounts/4/lines]
+
+
+Processing LinesController#index (for 127.0.0.1 at 2009-05-17 00:47:27) [GET]
+  Parameters: {"account_id"=>"4", "client_id"=>"2"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 4) [0m
+  [4;36;1mLine Load (0.5ms)[0m   [0;1mSELECT "lines".* FROM "lines" WHERE ("lines".account_id = 4) [0m
+Rendering template within layouts/application
+Rendering lines/index
+Completed in 14ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/clients/2/accounts/4/lines]
+
+
+Processing AccountsController#recalc_total (for 127.0.0.1 at 2009-05-17 00:47:34) [GET]
+  Parameters: {"id"=>"4", "client_id"=>"2"}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 4) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT sum("lines".amount) AS sum_amount FROM "lines" WHERE ("lines".account_id = 4) [0m
+wrong total! 90, should be 230. Updated.
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+Redirected to http://0.0.0.0:3000/clients/2
+Completed in 12ms (DB: 0) | 302 Found [http://0.0.0.0/clients/2/accounts/4/recalc_total]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:47:34) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.4ms)
+Rendered accounts/_cashregister (3.2ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.7ms)
+Rendered accounts/_cashregister (2.9ms)
+Completed in 21ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing LinesController#index (for 127.0.0.1 at 2009-05-17 00:49:16) [GET]
+  Parameters: {"account_id"=>"4", "client_id"=>"2"}
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 4) [0m
+  [4;35;1mLine Load (0.4ms)[0m   [0mSELECT "lines".* FROM "lines" WHERE ("lines".account_id = 4) [0m
+Rendering template within layouts/application
+Rendering lines/index
+Completed in 14ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/clients/2/accounts/4/lines]
+
+
+Processing AccountsController#recalc_total (for 127.0.0.1 at 2009-05-17 00:49:20) [GET]
+  Parameters: {"id"=>"4", "client_id"=>"2"}
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 4) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT sum("lines".amount) AS sum_amount FROM "lines" WHERE ("lines".account_id = 4) [0m
+wrong total! 90, should be 230. Updated.
+  [4;36;1mAccount Update (0.3ms)[0m   [0;1mUPDATE "accounts" SET "total" = 230, "updated_at" = '2009-05-16 22:49:20' WHERE "id" = 4[0m
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+Redirected to http://0.0.0.0:3000/clients/2
+Completed in 14ms (DB: 1) | 302 Found [http://0.0.0.0/clients/2/accounts/4/recalc_total]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:49:20) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.3ms)
+Rendered accounts/_cashregister (3.1ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.8ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.0ms)
+Rendered accounts/_cashregister (2.6ms)
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing AccountsController#recalc_total (for 127.0.0.1 at 2009-05-17 00:49:30) [GET]
+  Parameters: {"id"=>"5", "client_id"=>"2"}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT sum("lines".amount) AS sum_amount FROM "lines" WHERE ("lines".account_id = 5) [0m
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+Redirected to http://0.0.0.0:3000/clients/2
+Completed in 12ms (DB: 0) | 302 Found [http://0.0.0.0/clients/2/accounts/5/recalc_total]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:49:30) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.4ms)
+Rendered accounts/_cashregister (3.3ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (2.0ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.7ms)
+Rendered accounts/_cashregister (2.4ms)
+Completed in 22ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing AccountsController#recalc_total (for 127.0.0.1 at 2009-05-17 00:49:46) [GET]
+  Parameters: {"id"=>"6", "client_id"=>"2"}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 6) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT sum("lines".amount) AS sum_amount FROM "lines" WHERE ("lines".account_id = 6) [0m
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+Redirected to http://0.0.0.0:3000/clients/2
+Completed in 12ms (DB: 0) | 302 Found [http://0.0.0.0/clients/2/accounts/6/recalc_total]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:49:46) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.5ms)
+Rendered accounts/_cashregister (3.3ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.5ms)
+Rendered accounts/_cashregister (2.0ms)
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.6ms)
+Rendered accounts/_cashregister (2.8ms)
+Completed in 21ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+  [4;36;1mAccount Load (1.1ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT sum("lines".amount) AS sum_amount FROM "lines" WHERE ("lines".account_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT sum("lines".amount) AS sum_amount FROM "lines" WHERE ("lines".account_id = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT sum("lines".amount) AS sum_amount FROM "lines" WHERE ("lines".account_id = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT sum("lines".amount) AS sum_amount FROM "lines" WHERE ("lines".account_id = 4) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT sum("lines".amount) AS sum_amount FROM "lines" WHERE ("lines".account_id = 5) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT sum("lines".amount) AS sum_amount FROM "lines" WHERE ("lines".account_id = 6) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT sum("lines".amount) AS sum_amount FROM "lines" WHERE ("lines".account_id = 7) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT sum("lines".amount) AS sum_amount FROM "lines" WHERE ("lines".account_id = 8) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT sum("lines".amount) AS sum_amount FROM "lines" WHERE ("lines".account_id = 9) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT sum("lines".amount) AS sum_amount FROM "lines" WHERE ("lines".account_id = 10) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT sum("lines".amount) AS sum_amount FROM "lines" WHERE ("lines".account_id = 11) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT sum("lines".amount) AS sum_amount FROM "lines" WHERE ("lines".account_id = 12) [0m
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:52:33) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (1.4ms)
+Rendered accounts/_cashregister (3.3ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+Completed in 21ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/clients/2]
+
+
+Processing ClientsController#auto_complete_for_client_name (for 127.0.0.1 at 2009-05-17 00:52:36) [POST]
+  Parameters: {"client"=>{"name"=>"M"}}
+  [4;36;1mClient Load (0.5ms)[0m   [0;1mSELECT * FROM "clients" WHERE (name like '%M%') [0m
+  [4;35;1mAccount Load (0.7ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id IN (1,2,3,4)) [0m
+Rendering clients/auto_complete_for_client_name
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 1) LIMIT 1[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 1) LIMIT 1[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 2) LIMIT 1[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 4) LIMIT 1[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 4) LIMIT 1[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 4) LIMIT 1[0m
+Completed in 17ms (View: 6, DB: 3) | 200 OK [http://0.0.0.0/clients/auto_complete_for_client_name]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2009-05-17 00:52:38) [GET]
+  Parameters: {"client"=>{"name"=>"Mila Buus Westmark"}}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."name" = 'Mila Buus Westmark') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/clients/3
+Completed in 6ms (DB: 0) | 302 Found [http://0.0.0.0/clients?client%5Bname%5D=Mila+Buus+Westmark]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:52:38) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 3) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 3) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+Rendered lines/_line (3.8ms)
+Rendered accounts/_cashregister (6.5ms)
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+Rendered lines/_line (0.6ms)
+Rendered accounts/_cashregister (2.8ms)
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (2.1ms)
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/clients/3]
+
+
+Processing LinesController#create (for 127.0.0.1 at 2009-05-17 00:52:43) [POST]
+  Parameters: {"line"=>{"amount"=>"+10", "account_id"=>"8"}, "authenticity_token"=>"7iwol4c4u/PyZzNDyMqNCJg/L4h7C1ImBQcNJtS2Tzs="}
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 8) [0m
+  [4;35;1mLine Create (0.3ms)[0m   [0mINSERT INTO "lines" ("comment", "created_at", "updated_at", "account_id", "amount") VALUES(NULL, '2009-05-16 22:52:43', '2009-05-16 22:52:43', 8, 10)[0m
+  [4;36;1mAccount Update (0.1ms)[0m   [0;1mUPDATE "accounts" SET "total" = 100, "updated_at" = '2009-05-16 22:52:43' WHERE "id" = 8[0m
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 3) [0m
+Redirected to http://0.0.0.0:3000/clients/3
+Completed in 15ms (DB: 1) | 302 Found [http://0.0.0.0/lines]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-05-17 00:52:43) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 3) [0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT "accounts".* FROM "accounts" WHERE ("accounts".client_id = 3) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Rendered clients/_finder (0.5ms)
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'mad') AND ("accounts".client_id = 3) LIMIT 1[0m
+Rendered lines/_line (1.3ms)
+Rendered accounts/_cashregister (3.1ms)
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'bar') AND ("accounts".client_id = 3) LIMIT 1[0m
+Rendered lines/_line (0.4ms)
+Rendered accounts/_cashregister (1.9ms)
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."atype" = 'tur') AND ("accounts".client_id = 3) LIMIT 1[0m
+Rendered lines/_line (0.5ms)
+Rendered accounts/_cashregister (2.4ms)
+Completed in 69ms (View: 58, DB: 1) | 200 OK [http://0.0.0.0/clients/3]

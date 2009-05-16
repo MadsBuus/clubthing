@@ -3,30 +3,13 @@
 	<%= render :partial => 'finder' %>
 </div>
 <div class="mcol">
-	Mad
-	<div class="total">
-	<%= @client.account('mad').total %>,-
-	</div>
-	<%= link_to '>>', client_account_lines_path(@client, @client.account('mad')) %>
-	<%= render :partial => 'lines/line', :object => @client.account('mad') %>
+	<%= render :partial => 'accounts/cashregister', :locals => {:name => 'mad'} %>
 </div>
-
 <div class="lcol">
-	Bar	
-	<div class="total">
-		<%= @client.account('bar').total %>,-
-	</div>
-	<%= link_to '>>', client_account_lines_path(@client, @client.account('bar')) %>
-	<%= render :partial => 'lines/line', :object => @client.account('bar') %>
+	<%= render :partial => 'accounts/cashregister', :locals => {:name => 'bar'} %>
 </div>
-
 <div class="rcol">
-	Aktiviteter
-	<div class="total">
-		<%= @client.account('tur').total %>,-
-	</div>
-	<%= link_to '>>', client_account_lines_path(@client, @client.account('tur')) %>
-	<%= render :partial => 'lines/line', :object => @client.account('tur') %>	
+	<%= render :partial => 'accounts/cashregister', :locals => {:name => 'tur'} %>
 </div>
 	
 
