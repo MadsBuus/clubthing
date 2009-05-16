@@ -1,0 +1,18 @@
+<p>
+  <b>Client:</b>
+  <%=h @account.client_id %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @account.type %>
+</p>
+
+<p>
+  <b>Total:</b>
+  <%=h @account.total %>
+</p>
+
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>

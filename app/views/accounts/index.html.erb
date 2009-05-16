@@ -1,0 +1,12 @@
+<h1>Listing accounts</h1>
+
+<table>
+<% @accounts.each do |account| %>
+  <tr>
+    <td><%=h account.client.name if account.client %></td>
+    <td><%= link_to account.atype, client_account_lines_path(account.client, account) %></td>
+    <td><%=h account.total %></td>
+	</td>
+  </tr>
+<% end %>
+</table>

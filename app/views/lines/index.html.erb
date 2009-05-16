@@ -1,0 +1,29 @@
+<h1><%= @client.name %> (<%= @client.klass %>)</h1>
+<h2><%= @account.atype %></h2>
+<%= link_to '<<', @client %>
+<table>
+	<tr>
+		<th>Dato</th>
+		<th>Note</th>
+		<th class="right">Ind</th>
+		<th class="right">Ud</th>
+		<th class="right">Total</th>
+	</tr>	
+<% start = 0 %>	
+<% @lines.each do |l| %>
+	<tr>
+		<td><%= l.created_at.to_s(:short) %> </td>
+		<td><%= l.comment %> </td>
+		<td class="right"><%= l.amount if l.amount > 0 %></td>
+		<td class="right"><%= l.amount if l.amount < 0 %></td>
+		<td class="right"><%= start += l.amount %></td>
+	</tr>
+<% end -%>
+	<tr>
+		<td class="topline"></td>
+		<td class="topline">Total</td>
+		<td class="topline"></td>
+		<td class="topline"></td>
+		<td class="right topline"><%= @account.total %></td>
+	</tr>
+</table>

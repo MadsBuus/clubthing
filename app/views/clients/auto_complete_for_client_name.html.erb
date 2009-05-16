@@ -1,0 +1,6 @@
+<ul><% @matches.each do |client| %>
+	<li><%= highlight client.name, @pattern -%><span class="informal"> (<%= client.klass %>)</span><span class="account_info informal">
+	<%= revisor client.account('bar').total -%>
+	<%= revisor client.account('mad').total -%>
+	<%= revisor client.account('tur').total -%></span></li>
+<% end -%></ul>

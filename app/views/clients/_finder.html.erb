@@ -1,0 +1,4 @@
+<% form_tag clients_path, :method=>:get, :class=> 'change_client' do -%>
+<%= text_field_with_auto_complete :client, :name, {:autocomplete => "off", :onkeyup=> "if(event.keyCode=='13'){this.form.submit()}", :onclick => 'this.select()', :value => ''}, :skip_style => true %>
+<%= submit_tag 'skift' %>
+<% end -%>

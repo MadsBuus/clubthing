@@ -1,0 +1,24 @@
+<%= render :partial => 'finder' %>
+
+<h1>Listing clients</h1>
+
+<table>
+  <tr>
+    <th>Navn</th>
+    <th>Klasse</th>
+  </tr>
+
+<% @clients.each do |client| %>
+  <tr>
+    <td><%=h client.name %></td>
+    <td><%=h client.klass %></td>
+    <td><%= link_to 'Show', client %></td>
+    <td><%= link_to 'Edit', edit_client_path(client) %></td>
+    <td><%= link_to 'Destroy', client, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New client', new_client_path %>

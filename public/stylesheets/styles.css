@@ -1,0 +1,180 @@
+body {
+background-color: #2CA3CB;
+border: 0;
+margin: 0;
+font-family: tahoma;
+font-size: 24px;
+color: white;
+}
+
+h1, h2 {
+	margin-top:0;
+	padding-top:0;
+}
+
+table {
+	width: 100%;
+}
+
+th.right, td.right {
+	text-align:right;
+}
+
+td.topline {
+	border-top: 1px solid black;
+}
+
+#fixedframe {
+position: fixed;
+top: 1%;
+bottom: 1%;
+left: 1%;
+right: 1%;
+padding: 0px;
+background-color: black;
+-webkit-border-radius: 40px;
+-moz-border-radius: 40px;
+border-radius: 40px;
+border: 1% solid black;
+}
+
+#frame {
+	padding: 40px;
+	color:black;
+	background-color: white;
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+	border-color: black;
+	border-width: 20px;
+	border-style: solid;
+	margin: 1%;
+}
+
+.rcol, .mcol, .lcol {
+-webkit-border-radius: 40px;
+-moz-border-radius: 40px;
+border-radius: 40px;
+position: fixed;
+top: 20%;
+bottom: 20px;
+width: 28%;
+padding: 2%;
+background-position: top center;
+background-repeat: no-repeat;
+}
+
+.rcol {
+right: 2%;
+float: right;
+background-color: #74A629;
+background-image: url('/images/bus2s.png');
+}
+
+.mcol {
+position: fixed;
+left: 34%;
+right: 35%;
+background-color: #FC9B00;
+background-image: url('/images/lunch2.png');
+}
+
+.lcol {
+left: 2%;
+float: left;
+background-color: #334C84;
+background-image: url('/images/fruit2s.png');
+}
+
+#banner {
+/* text-align: center; */
+position: fixed;
+top: 2%;
+right: 2%;
+left: 2%;
+padding: 0 0 2% 0;
+background-color: black;
+color: white;
+}
+
+#banner h1 {
+	float:left;
+}
+
+form.change_client {
+	float:right;
+	margin-top: 40px;
+}
+
+form.change_client input {
+font-size: 120%;
+background-color: #eee;
+border:0;
+color: black;
+}
+
+.total {
+margin-top: 150px;
+text-align: center;
+font-size: 300%;
+}
+
+.input {
+margin-top: 50px;
+text-align: center;
+}
+
+.input input {
+font-size: 300%;
+width: 100%;
+text-align: center;
+}
+
+div.auto_complete {
+width: 350px;
+background: #fff;
+z-index:100;
+color: black;
+}
+
+div.auto_complete ul {
+border: 1px solid #888;
+margin: 0;
+padding: 0;
+width: 100%;
+list-style-type: none;
+}
+
+div.auto_complete ul li {
+margin: 0;
+padding: 3px;
+}
+
+div.auto_complete ul li.selected {
+background-color: #ffb;
+}
+
+div.auto_complete ul strong.highlight {
+color: #800;
+margin: 0;
+padding: 0;
+}
+
+.account_info {
+	margin-top: -30px;
+	display:block;
+	float:right;
+	color: #999;
+	font-size:80%;
+	font-family:monospace;
+}
+
+.neg {
+	white-space: pre;
+	color:red;
+}
+.pos {
+	white-space: pre;
+	color:#999;
+}
+
