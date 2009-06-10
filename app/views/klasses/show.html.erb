@@ -1,0 +1,16 @@
+<h1><%= @klass.display %></h1>
+<h2>Årgang <%= @klass.startyear %></h2>
+<%= @klass.children.count %> elev(er)
+
+<ul>
+<% @klass.children.each do |pupil| %>
+	<li>
+		<%= link_to pupil.name, child_path(pupil) %>
+	</li>
+<% end -%>
+</ul>
+<%= link_to 'Opret barn', new_klass_child_path(@klass) %> |
+
+
+<%= link_to 'Ret', edit_klass_path(@klass) %> |
+<%= link_to 'Tilbage', klasses_path %>

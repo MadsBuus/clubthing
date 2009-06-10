@@ -1,8 +1,8 @@
-<div class="input">
+<div class="lineinput">
 	<% form_for(@line) do |f| %>
 	  <%= f.error_messages %>
 	  <%= f.hidden_field :account_id, :value => line.id %>
 	  <%= f.text_field :amount, :autocomplete => 'off' %>
-	  (skriv '+' foran for at sætte ind)
 	<% end %>
+	(Skriv '+' foran for at sætte ind)
 </div>

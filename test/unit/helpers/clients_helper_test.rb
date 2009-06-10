@@ -1,4 +1,4 @@
 require 'test_helper'
 
-class ClientsHelperTest < ActionView::TestCase
+class ChildrenHelperTest < ActionView::TestCase
 end

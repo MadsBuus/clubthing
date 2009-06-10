@@ -1,0 +1,8 @@
+<% form_tag children_path, :method=>:get, :class=> 'change_child' do -%>
+	<p class="threeq">
+		<%= text_field_with_auto_complete :child, :name, {:class => 'search', :autocomplete => "off", :onkeyup=> "if(event.keyCode=='13'){this.form.submit()}", :onclick => 'this.select()', :value => ''}, :skip_style => true %>
+	</p>
+	<p class="quarter">
+		<%= submit_tag 'find' %>
+	</p>
+<% end -%>

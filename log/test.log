@@ -1,0 +1,612 @@
+  [4;36;1mKlass Create (0.5ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-30 16:49:14', '2009-05-30 16:49:14')[0m
+  [4;35;1mchild Exists (0.2ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mchild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-30 16:49:14', '2009-05-30 16:49:14', 1, 'mads@buus.net')[0m
+  [4;35;1mchild Load (0.1ms)[0m   [0mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-30 16:49:29', '2009-05-30 16:49:29')[0m
+  [4;35;1mchild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mchild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-30 16:49:29', '2009-05-30 16:49:29', 1, 'mads@buus.net')[0m
+  [4;35;1mchild Load (0.2ms)[0m   [0mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-30 16:59:54', '2009-05-30 16:59:54')[0m
+  [4;35;1mchild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mchild Create (0.2ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-30 16:59:54', '2009-05-30 16:59:54', 1, 'mads@buus.net')[0m
+  [4;35;1mchild Load (0.2ms)[0m   [0mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "accounts" WHERE ("accounts".child_id = NULL) [0m
+  [4;36;1mKlass Create (0.6ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-30 17:00:08', '2009-05-30 17:00:08')[0m
+  [4;35;1mchild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mchild Create (0.3ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-30 17:00:08', '2009-05-30 17:00:08', 1, 'mads@buus.net')[0m
+  [4;35;1mchild Load (0.2ms)[0m   [0mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "accounts" WHERE ("accounts".child_id = NULL) [0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-30 17:00:32', '2009-05-30 17:00:32')[0m
+  [4;35;1mchild Exists (0.2ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mchild Create (0.2ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-30 17:00:32', '2009-05-30 17:00:32', 1, 'mads@buus.net')[0m
+  [4;35;1mchild Load (0.3ms)[0m   [0mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "accounts" WHERE ("accounts".child_id = NULL) [0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-30 17:01:32', '2009-05-30 17:01:32')[0m
+  [4;35;1mchild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mchild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-30 17:01:32', '2009-05-30 17:01:32', 1, 'mads@buus.net')[0m
+  [4;35;1mchild Load (0.2ms)[0m   [0mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "accounts" WHERE ("accounts".child_id = NULL) [0m
+  [4;36;1mKlass Create (18.6ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-30 19:53:54', '2009-05-30 19:53:54')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAccounts (20090506192123)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_type_id" integer, "child_id" integer, "atype" varchar(255), "total" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090506192123')[0m
+Migrating to CreateLines (20090506192233)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "lines" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "amount" integer, "comment" text, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090506192233')[0m
+Migrating to CreateChildren (20090506192319)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "children" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "klass_id" integer, "email" varchar(255), "address" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090506192319')[0m
+Migrating to CreateUsers (20090519200613)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "crypted_password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090519200613')[0m
+Migrating to CreateKlasses (20090521133138)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "klasses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "startyear" integer, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090521133138')[0m
+Migrating to CreateAccountTypes (20090522192358)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "account_types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mAccountType Create (0.1ms)[0m   [0mINSERT INTO "account_types" ("created_at", "title", "updated_at") VALUES('2009-05-30 19:54:42', 'Mad', '2009-05-30 19:54:42')[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mAccountType Create (0.1ms)[0m   [0;1mINSERT INTO "account_types" ("created_at", "title", "updated_at") VALUES('2009-05-30 19:54:42', 'Bar', '2009-05-30 19:54:42')[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mAccountType Create (0.0ms)[0m   [0mINSERT INTO "account_types" ("created_at", "title", "updated_at") VALUES('2009-05-30 19:54:42', 'Aktiviteter', '2009-05-30 19:54:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090522192358')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("account_types")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("accounts")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("children")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("klasses")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("lines")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-30 19:54:48', '2009-05-30 19:54:48')[0m
+  [4;35;1mChild Exists (0.2ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.2ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-30 19:54:48', '2009-05-30 19:54:48', 1, 'mads@buus.net')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "accounts" WHERE ("accounts".child_id = NULL) [0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-30 19:56:13', '2009-05-30 19:56:13')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-30 19:56:13', '2009-05-30 19:56:13', 1, 'mads@buus.net')[0m
+  [4;35;1mChild Load (0.1ms)[0m   [0mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "accounts" WHERE ("accounts".child_id = NULL) [0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-30 19:56:51', '2009-05-30 19:56:51')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-30 19:56:51', '2009-05-30 19:56:51', 1, 'mads@buus.net')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "accounts" WHERE ("accounts".child_id = NULL) [0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-30 19:57:16', '2009-05-30 19:57:16')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-30 19:57:16', '2009-05-30 19:57:16', 1, 'mads@buus.net')[0m
+  [4;35;1mChild Load (0.1ms)[0m   [0mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "accounts" WHERE ("accounts".child_id = NULL) [0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-30 19:58:37', '2009-05-30 19:58:37')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-30 19:58:37', '2009-05-30 19:58:37', 1, 'mads@buus.net')[0m
+  [4;35;1mChild Load (0.2ms)[0m   [0mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "accounts" WHERE ("accounts".child_id = NULL) [0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-30 19:59:00', '2009-05-30 19:59:00')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-30 19:59:00', '2009-05-30 19:59:00', 1, 'mads@buus.net')[0m
+  [4;35;1mChild Load (0.1ms)[0m   [0mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "accounts" WHERE ("accounts".child_id = NULL) [0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-31 10:31:55', '2009-05-31 10:31:55')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 10:31:55', '2009-05-31 10:31:55', 1, 'mads@buus.net')[0m
+  [4;35;1mChild Load (0.2ms)[0m   [0mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "accounts" WHERE ("accounts".child_id = NULL) [0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-31 10:35:59', '2009-05-31 10:35:59')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 10:35:59', '2009-05-31 10:35:59', 1, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.2ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.3ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:35:59', '2009-05-31 10:35:59', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:35:59', '2009-05-31 10:35:59', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:35:59', '2009-05-31 10:35:59', 0, 3, NULL, 1)[0m
+  [4;35;1mChild Load (0.2ms)[0m   [0mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "accounts" WHERE ("accounts".child_id = NULL) [0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-31 10:36:59', '2009-05-31 10:36:59')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 10:36:59', '2009-05-31 10:36:59', 1, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.8ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.3ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:36:59', '2009-05-31 10:36:59', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:36:59', '2009-05-31 10:36:59', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:36:59', '2009-05-31 10:36:59', 0, 3, NULL, 1)[0m
+  [4;35;1mChild Load (0.2ms)[0m   [0mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "accounts" WHERE ("accounts".child_id = NULL) [0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-31 10:39:00', '2009-05-31 10:39:00')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 10:39:00', '2009-05-31 10:39:00', 1, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.2ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.2ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:39:00', '2009-05-31 10:39:00', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.2ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:39:00', '2009-05-31 10:39:00', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:39:00', '2009-05-31 10:39:00', 0, 3, NULL, 1)[0m
+  [4;35;1mChild Load (0.3ms)[0m   [0mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-31 10:42:46', '2009-05-31 10:42:46')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 10:42:46', '2009-05-31 10:42:46', 1, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.3ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:42:46', '2009-05-31 10:42:46', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.2ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:42:46', '2009-05-31 10:42:46', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (1.0ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:42:46', '2009-05-31 10:42:46', 0, 3, NULL, 1)[0m
+  [4;35;1mChild Load (0.2ms)[0m   [0mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mAccountType Create (0.3ms)[0m   [0;1mINSERT INTO "account_types" ("created_at", "title", "updated_at") VALUES('2009-05-31 10:42:46', 'foo', '2009-05-31 10:42:46')[0m
+  [4;35;1mAccountType Create (0.0ms)[0m   [0mINSERT INTO "account_types" ("created_at", "title", "updated_at") VALUES('2009-05-31 10:42:46', 'bar', '2009-05-31 10:42:46')[0m
+  [4;36;1mAccountType Create (0.0ms)[0m   [0;1mINSERT INTO "account_types" ("created_at", "title", "updated_at") VALUES('2009-05-31 10:42:46', 'bat', '2009-05-31 10:42:46')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 10:42:46', '2009-05-31 10:42:46', NULL, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.3ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:42:46', '2009-05-31 10:42:46', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:42:46', '2009-05-31 10:42:46', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:42:46', '2009-05-31 10:42:46', 0, 3, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:42:46', '2009-05-31 10:42:46', 0, 4, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:42:46', '2009-05-31 10:42:46', 0, 5, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:42:46', '2009-05-31 10:42:46', 0, 6, NULL, 1)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "account_types" [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-31 10:43:06', '2009-05-31 10:43:06')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 10:43:06', '2009-05-31 10:43:06', 1, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.2ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.2ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:06', '2009-05-31 10:43:06', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:06', '2009-05-31 10:43:06', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.2ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:06', '2009-05-31 10:43:06', 0, 3, NULL, 1)[0m
+  [4;35;1mChild Load (0.2ms)[0m   [0mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mAccountType Create (0.3ms)[0m   [0;1mINSERT INTO "account_types" ("created_at", "title", "updated_at") VALUES('2009-05-31 10:43:06', 'foo', '2009-05-31 10:43:06')[0m
+  [4;35;1mAccountType Create (0.0ms)[0m   [0mINSERT INTO "account_types" ("created_at", "title", "updated_at") VALUES('2009-05-31 10:43:06', 'bar', '2009-05-31 10:43:06')[0m
+  [4;36;1mAccountType Create (0.1ms)[0m   [0;1mINSERT INTO "account_types" ("created_at", "title", "updated_at") VALUES('2009-05-31 10:43:06', 'bat', '2009-05-31 10:43:06')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 10:43:06', '2009-05-31 10:43:06', NULL, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.3ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:06', '2009-05-31 10:43:06', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:06', '2009-05-31 10:43:06', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:06', '2009-05-31 10:43:06', 0, 3, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:06', '2009-05-31 10:43:06', 0, 4, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:06', '2009-05-31 10:43:06', 0, 5, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:06', '2009-05-31 10:43:06', 0, 6, NULL, 1)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "account_types" [0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-31 10:43:19', '2009-05-31 10:43:19')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 10:43:19', '2009-05-31 10:43:19', 1, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.3ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.3ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:19', '2009-05-31 10:43:19', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:19', '2009-05-31 10:43:19', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:19', '2009-05-31 10:43:19', 0, 3, NULL, 1)[0m
+  [4;35;1mChild Load (0.2ms)[0m   [0mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mAccountType Create (0.3ms)[0m   [0;1mINSERT INTO "account_types" ("created_at", "title", "updated_at") VALUES('2009-05-31 10:43:19', 'foo', '2009-05-31 10:43:19')[0m
+  [4;35;1mAccountType Create (0.0ms)[0m   [0mINSERT INTO "account_types" ("created_at", "title", "updated_at") VALUES('2009-05-31 10:43:19', 'bar', '2009-05-31 10:43:19')[0m
+  [4;36;1mAccountType Create (0.0ms)[0m   [0;1mINSERT INTO "account_types" ("created_at", "title", "updated_at") VALUES('2009-05-31 10:43:19', 'bat', '2009-05-31 10:43:19')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 10:43:19', '2009-05-31 10:43:19', NULL, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.3ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:19', '2009-05-31 10:43:19', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:19', '2009-05-31 10:43:19', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:19', '2009-05-31 10:43:19', 0, 3, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:19', '2009-05-31 10:43:19', 0, 4, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:19', '2009-05-31 10:43:19', 0, 5, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:19', '2009-05-31 10:43:19', 0, 6, NULL, 1)[0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-31 10:43:40', '2009-05-31 10:43:40')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 10:43:40', '2009-05-31 10:43:40', 1, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.2ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.2ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:40', '2009-05-31 10:43:40', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:40', '2009-05-31 10:43:40', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:40', '2009-05-31 10:43:40', 0, 3, NULL, 1)[0m
+  [4;35;1mChild Load (0.2ms)[0m   [0mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mAccountType Create (0.3ms)[0m   [0;1mINSERT INTO "account_types" ("created_at", "title", "updated_at") VALUES('2009-05-31 10:43:40', 'foo', '2009-05-31 10:43:40')[0m
+  [4;35;1mAccountType Create (0.0ms)[0m   [0mINSERT INTO "account_types" ("created_at", "title", "updated_at") VALUES('2009-05-31 10:43:40', 'bar', '2009-05-31 10:43:40')[0m
+  [4;36;1mAccountType Create (0.0ms)[0m   [0;1mINSERT INTO "account_types" ("created_at", "title", "updated_at") VALUES('2009-05-31 10:43:40', 'bat', '2009-05-31 10:43:40')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 10:43:40', '2009-05-31 10:43:40', NULL, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.3ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:40', '2009-05-31 10:43:40', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:40', '2009-05-31 10:43:40', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:40', '2009-05-31 10:43:40', 0, 3, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:40', '2009-05-31 10:43:40', 0, 4, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:40', '2009-05-31 10:43:40', 0, 5, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:40', '2009-05-31 10:43:40', 0, 6, NULL, 1)[0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-31 10:43:54', '2009-05-31 10:43:54')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 10:43:54', '2009-05-31 10:43:54', 1, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.2ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.2ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:54', '2009-05-31 10:43:54', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:54', '2009-05-31 10:43:54', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:54', '2009-05-31 10:43:54', 0, 3, NULL, 1)[0m
+  [4;35;1mChild Load (0.2ms)[0m   [0mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Exists (0.1ms)[0m   [0;1mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;35;1mChild Create (0.2ms)[0m   [0mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 10:43:54', '2009-05-31 10:43:54', NULL, 'mads@buus.net')[0m
+  [4;36;1mAccountType Load (0.2ms)[0m   [0;1mSELECT * FROM "account_types" [0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:54', '2009-05-31 10:43:54', 0, 1, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:54', '2009-05-31 10:43:54', 0, 2, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:43:54', '2009-05-31 10:43:54', 0, 3, NULL, 1)[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-31 10:44:27', '2009-05-31 10:44:27')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 10:44:27', '2009-05-31 10:44:27', 1, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.2ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.3ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:44:27', '2009-05-31 10:44:27', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:44:27', '2009-05-31 10:44:27', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:44:27', '2009-05-31 10:44:27', 0, 3, NULL, 1)[0m
+  [4;35;1mChild Load (0.2ms)[0m   [0mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "account_types" [0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.3ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 10:44:27', '2009-05-31 10:44:27', NULL, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.2ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:44:27', '2009-05-31 10:44:27', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:44:27', '2009-05-31 10:44:27', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:44:27', '2009-05-31 10:44:27', 0, 3, NULL, 1)[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-31 10:44:39', '2009-05-31 10:44:39')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 10:44:39', '2009-05-31 10:44:39', 1, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.8ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:44:39', '2009-05-31 10:44:39', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:44:39', '2009-05-31 10:44:39', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:44:39', '2009-05-31 10:44:39', 0, 3, NULL, 1)[0m
+  [4;35;1mChild Load (0.2ms)[0m   [0mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "account_types" [0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-31 10:46:51', '2009-05-31 10:46:51')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 10:46:51', '2009-05-31 10:46:51', 1, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.2ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.3ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:46:51', '2009-05-31 10:46:51', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:46:51', '2009-05-31 10:46:51', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.2ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:46:51', '2009-05-31 10:46:51', 0, 3, NULL, 1)[0m
+  [4;35;1mChild Load (0.2ms)[0m   [0mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "account_types" [0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.2ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 10:46:51', '2009-05-31 10:46:51', NULL, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.2ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:46:51', '2009-05-31 10:46:51', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:46:51', '2009-05-31 10:46:51', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:46:51', '2009-05-31 10:46:51', 0, 3, NULL, 1)[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-31 10:47:16', '2009-05-31 10:47:16')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 10:47:16', '2009-05-31 10:47:16', 1, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.2ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.2ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:47:16', '2009-05-31 10:47:16', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:47:16', '2009-05-31 10:47:16', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:47:16', '2009-05-31 10:47:16', 0, 3, NULL, 1)[0m
+  [4;35;1mChild Load (0.2ms)[0m   [0mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "account_types" [0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.2ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 10:47:16', '2009-05-31 10:47:16', NULL, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.2ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:47:16', '2009-05-31 10:47:16', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:47:16', '2009-05-31 10:47:16', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:47:16', '2009-05-31 10:47:16', 0, 3, NULL, 1)[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-31 10:47:36', '2009-05-31 10:47:36')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 10:47:36', '2009-05-31 10:47:36', 1, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.2ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.2ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:47:36', '2009-05-31 10:47:36', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:47:36', '2009-05-31 10:47:36', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:47:36', '2009-05-31 10:47:36', 0, 3, NULL, 1)[0m
+  [4;35;1mChild Load (0.2ms)[0m   [0mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "account_types" [0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.2ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 10:47:36', '2009-05-31 10:47:36', NULL, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.2ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:47:36', '2009-05-31 10:47:36', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:47:36', '2009-05-31 10:47:36', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:47:36', '2009-05-31 10:47:36', 0, 3, NULL, 1)[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-31 10:59:30', '2009-05-31 10:59:30')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 10:59:30', '2009-05-31 10:59:30', 1, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.2ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.3ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:59:30', '2009-05-31 10:59:30', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.2ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:59:30', '2009-05-31 10:59:30', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:59:30', '2009-05-31 10:59:30', 0, 3, NULL, 1)[0m
+  [4;35;1mChild Load (0.2ms)[0m   [0mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "account_types" [0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.2ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 10:59:30', '2009-05-31 10:59:30', NULL, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.2ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:59:30', '2009-05-31 10:59:30', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:59:30', '2009-05-31 10:59:30', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 10:59:30', '2009-05-31 10:59:30', 0, 3, NULL, 1)[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-31 11:26:47', '2009-05-31 11:26:47')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "account_types" [0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-31 11:31:35', '2009-05-31 11:31:35')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "account_types" [0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-31 11:33:12', '2009-05-31 11:33:12')[0m
+  [4;35;1mKlass Load (0.1ms)[0m   [0mSELECT * FROM "klasses" WHERE ("klasses"."startyear" = '2005') LIMIT 1[0m
+  [4;36;1mChild Exists (0.1ms)[0m   [0;1mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;35;1mChild Create (0.1ms)[0m   [0mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 11:33:12', '2009-05-31 11:33:12', 1, 'mads@buus.net')[0m
+  [4;36;1mAccountType Load (0.2ms)[0m   [0;1mSELECT * FROM "account_types" [0m
+  [4;35;1mAccount Create (0.3ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:33:12', '2009-05-31 11:33:12', 0, 1, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:33:12', '2009-05-31 11:33:12', 0, 2, NULL, 1)[0m
+  [4;35;1mAccount Create (0.2ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:33:12', '2009-05-31 11:33:12', 0, 3, NULL, 1)[0m
+  [4;36;1mChild Load (0.2ms)[0m   [0;1mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "account_types" [0m
+  [4;36;1mKlass Load (0.1ms)[0m   [0;1mSELECT * FROM "klasses" WHERE ("klasses"."startyear" = '2005') LIMIT 1[0m
+  [4;35;1mKlass Create (0.2ms)[0m   [0mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, NULL, '2009-05-31 11:33:12', '2009-05-31 11:33:12')[0m
+  [4;36;1mChild Exists (0.1ms)[0m   [0;1mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;35;1mChild Create (0.1ms)[0m   [0mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 11:33:12', '2009-05-31 11:33:12', 1, 'mads@buus.net')[0m
+  [4;36;1mAccountType Load (0.2ms)[0m   [0;1mSELECT * FROM "account_types" [0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:33:12', '2009-05-31 11:33:12', 0, 1, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:33:12', '2009-05-31 11:33:12', 0, 2, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:33:12', '2009-05-31 11:33:12', 0, 3, NULL, 1)[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-31 11:37:45', '2009-05-31 11:37:45')[0m
+  [4;35;1mKlass Load (0.1ms)[0m   [0mSELECT * FROM "klasses" WHERE ("klasses"."startyear" = '2005') LIMIT 1[0m
+  [4;36;1mChild Exists (0.2ms)[0m   [0;1mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;35;1mChild Create (0.1ms)[0m   [0mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 11:37:45', '2009-05-31 11:37:45', 1, 'mads@buus.net')[0m
+  [4;36;1mAccountType Load (0.2ms)[0m   [0;1mSELECT * FROM "account_types" [0m
+  [4;35;1mAccount Create (0.2ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:37:45', '2009-05-31 11:37:45', 0, 1, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:37:45', '2009-05-31 11:37:45', 0, 2, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:37:45', '2009-05-31 11:37:45', 0, 3, NULL, 1)[0m
+  [4;36;1mChild Load (0.2ms)[0m   [0;1mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "account_types" [0m
+  [4;36;1mKlass Load (0.1ms)[0m   [0;1mSELECT * FROM "klasses" WHERE ("klasses"."startyear" = '2005') LIMIT 1[0m
+  [4;35;1mKlass Create (0.2ms)[0m   [0mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, NULL, '2009-05-31 11:37:45', '2009-05-31 11:37:45')[0m
+  [4;36;1mChild Exists (0.0ms)[0m   [0;1mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;35;1mChild Create (0.1ms)[0m   [0mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 11:37:45', '2009-05-31 11:37:45', 1, 'mads@buus.net')[0m
+  [4;36;1mAccountType Load (0.2ms)[0m   [0;1mSELECT * FROM "account_types" [0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:37:45', '2009-05-31 11:37:45', 0, 1, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:37:45', '2009-05-31 11:37:45', 0, 2, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:37:45', '2009-05-31 11:37:45', 0, 3, NULL, 1)[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;35;1mKlass Load (0.1ms)[0m   [0mSELECT * FROM "klasses" WHERE ("klasses"."startyear" = '2005') LIMIT 1[0m
+  [4;36;1mKlass Create (0.2ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, NULL, '2009-05-31 11:37:45', '2009-05-31 11:37:45')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 11:37:45', '2009-05-31 11:37:45', 1, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.2ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:37:45', '2009-05-31 11:37:45', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:37:45', '2009-05-31 11:37:45', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:37:45', '2009-05-31 11:37:45', 0, 3, NULL, 1)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "account_types" [0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;36;1mAccount Destroy (0.1ms)[0m   [0;1mDELETE FROM "accounts" WHERE "id" = 1[0m
+  [4;35;1mAccount Destroy (0.0ms)[0m   [0mDELETE FROM "accounts" WHERE "id" = 2[0m
+  [4;36;1mAccount Destroy (0.0ms)[0m   [0;1mDELETE FROM "accounts" WHERE "id" = 3[0m
+  [4;35;1mChild Destroy (0.0ms)[0m   [0mDELETE FROM "children" WHERE "id" = 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."child_id" = 1) LIMIT 1[0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-31 11:38:41', '2009-05-31 11:38:41')[0m
+  [4;35;1mKlass Load (0.1ms)[0m   [0mSELECT * FROM "klasses" WHERE ("klasses"."startyear" = '2005') LIMIT 1[0m
+  [4;36;1mChild Exists (0.1ms)[0m   [0;1mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;35;1mChild Create (0.1ms)[0m   [0mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 11:38:41', '2009-05-31 11:38:41', 1, 'mads@buus.net')[0m
+  [4;36;1mAccountType Load (0.2ms)[0m   [0;1mSELECT * FROM "account_types" [0m
+  [4;35;1mAccount Create (0.3ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:38:41', '2009-05-31 11:38:41', 0, 1, NULL, 1)[0m
+  [4;36;1mAccount Create (0.2ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:38:41', '2009-05-31 11:38:41', 0, 2, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:38:41', '2009-05-31 11:38:41', 0, 3, NULL, 1)[0m
+  [4;36;1mChild Load (0.2ms)[0m   [0;1mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "account_types" [0m
+  [4;36;1mKlass Load (0.1ms)[0m   [0;1mSELECT * FROM "klasses" WHERE ("klasses"."startyear" = '2005') LIMIT 1[0m
+  [4;35;1mKlass Create (0.2ms)[0m   [0mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, NULL, '2009-05-31 11:38:41', '2009-05-31 11:38:41')[0m
+  [4;36;1mChild Exists (0.0ms)[0m   [0;1mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;35;1mChild Create (0.1ms)[0m   [0mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 11:38:41', '2009-05-31 11:38:41', 1, 'mads@buus.net')[0m
+  [4;36;1mAccountType Load (0.2ms)[0m   [0;1mSELECT * FROM "account_types" [0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:38:41', '2009-05-31 11:38:41', 0, 1, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:38:41', '2009-05-31 11:38:41', 0, 2, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:38:41', '2009-05-31 11:38:41', 0, 3, NULL, 1)[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;35;1mKlass Load (0.1ms)[0m   [0mSELECT * FROM "klasses" WHERE ("klasses"."startyear" = '2005') LIMIT 1[0m
+  [4;36;1mKlass Create (0.2ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, NULL, '2009-05-31 11:38:41', '2009-05-31 11:38:41')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 11:38:41', '2009-05-31 11:38:41', 1, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.2ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:38:41', '2009-05-31 11:38:41', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:38:41', '2009-05-31 11:38:41', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:38:41', '2009-05-31 11:38:41', 0, 3, NULL, 1)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "account_types" [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;36;1mAccount Destroy (0.1ms)[0m   [0;1mDELETE FROM "accounts" WHERE "id" = 1[0m
+  [4;35;1mAccount Destroy (0.0ms)[0m   [0mDELETE FROM "accounts" WHERE "id" = 2[0m
+  [4;36;1mAccount Destroy (0.0ms)[0m   [0;1mDELETE FROM "accounts" WHERE "id" = 3[0m
+  [4;35;1mChild Destroy (0.0ms)[0m   [0mDELETE FROM "children" WHERE "id" = 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."child_id" = 1) LIMIT 1[0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-31 11:39:22', '2009-05-31 11:39:22')[0m
+  [4;35;1mKlass Load (0.1ms)[0m   [0mSELECT * FROM "klasses" WHERE ("klasses"."startyear" = '2005') LIMIT 1[0m
+  [4;36;1mChild Exists (0.2ms)[0m   [0;1mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;35;1mChild Create (0.1ms)[0m   [0mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 11:39:22', '2009-05-31 11:39:22', 1, 'mads@buus.net')[0m
+  [4;36;1mAccountType Load (0.3ms)[0m   [0;1mSELECT * FROM "account_types" [0m
+  [4;35;1mAccount Create (0.2ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:39:22', '2009-05-31 11:39:22', 0, 1, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:39:22', '2009-05-31 11:39:22', 0, 2, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:39:22', '2009-05-31 11:39:22', 0, 3, NULL, 1)[0m
+  [4;36;1mChild Load (0.2ms)[0m   [0;1mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "account_types" [0m
+  [4;36;1mKlass Load (0.1ms)[0m   [0;1mSELECT * FROM "klasses" WHERE ("klasses"."startyear" = '2005') LIMIT 1[0m
+  [4;35;1mKlass Create (0.2ms)[0m   [0mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, NULL, '2009-05-31 11:39:22', '2009-05-31 11:39:22')[0m
+  [4;36;1mChild Exists (0.1ms)[0m   [0;1mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;35;1mChild Create (0.1ms)[0m   [0mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 11:39:22', '2009-05-31 11:39:22', 1, 'mads@buus.net')[0m
+  [4;36;1mAccountType Load (0.2ms)[0m   [0;1mSELECT * FROM "account_types" [0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:39:22', '2009-05-31 11:39:22', 0, 1, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:39:22', '2009-05-31 11:39:22', 0, 2, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:39:22', '2009-05-31 11:39:22', 0, 3, NULL, 1)[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;35;1mKlass Load (0.1ms)[0m   [0mSELECT * FROM "klasses" WHERE ("klasses"."startyear" = '2005') LIMIT 1[0m
+  [4;36;1mKlass Create (0.2ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, NULL, '2009-05-31 11:39:22', '2009-05-31 11:39:22')[0m
+  [4;35;1mChild Exists (0.1ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 11:39:22', '2009-05-31 11:39:22', 1, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.2ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:39:22', '2009-05-31 11:39:22', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:39:22', '2009-05-31 11:39:22', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:39:22', '2009-05-31 11:39:22', 0, 3, NULL, 1)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "account_types" [0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;36;1mAccount Destroy (0.1ms)[0m   [0;1mDELETE FROM "accounts" WHERE "id" = 1[0m
+  [4;35;1mAccount Destroy (0.0ms)[0m   [0mDELETE FROM "accounts" WHERE "id" = 2[0m
+  [4;36;1mAccount Destroy (0.0ms)[0m   [0;1mDELETE FROM "accounts" WHERE "id" = 3[0m
+  [4;35;1mChild Destroy (0.0ms)[0m   [0mDELETE FROM "children" WHERE "id" = 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."child_id" = 1) LIMIT 1[0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-31 11:44:23', '2009-05-31 11:44:23')[0m
+  [4;35;1mKlass Load (0.1ms)[0m   [0mSELECT * FROM "klasses" WHERE ("klasses"."startyear" = '2005') LIMIT 1[0m
+  [4;36;1mChild Exists (0.1ms)[0m   [0;1mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;35;1mChild Create (0.1ms)[0m   [0mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 11:44:23', '2009-05-31 11:44:23', 1, 'mads@buus.net')[0m
+  [4;36;1mAccountType Load (0.2ms)[0m   [0;1mSELECT * FROM "account_types" [0m
+  [4;35;1mAccount Create (0.3ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:44:23', '2009-05-31 11:44:23', 0, 1, NULL, 1)[0m
+  [4;36;1mAccount Create (0.2ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:44:23', '2009-05-31 11:44:23', 0, 2, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:44:23', '2009-05-31 11:44:23', 0, 3, NULL, 1)[0m
+  [4;36;1mChild Load (0.2ms)[0m   [0;1mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "account_types" [0m
+  [4;36;1mKlass Load (0.1ms)[0m   [0;1mSELECT * FROM "klasses" WHERE ("klasses"."startyear" = '2005') LIMIT 1[0m
+  [4;35;1mKlass Create (0.2ms)[0m   [0mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, NULL, '2009-05-31 11:44:23', '2009-05-31 11:44:23')[0m
+  [4;36;1mChild Exists (0.1ms)[0m   [0;1mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;35;1mChild Create (0.1ms)[0m   [0mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 11:44:23', '2009-05-31 11:44:23', 1, 'mads@buus.net')[0m
+  [4;36;1mAccountType Load (0.2ms)[0m   [0;1mSELECT * FROM "account_types" [0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:44:23', '2009-05-31 11:44:23', 0, 1, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:44:23', '2009-05-31 11:44:23', 0, 2, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:44:23', '2009-05-31 11:44:23', 0, 3, NULL, 1)[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;35;1mKlass Load (0.1ms)[0m   [0mSELECT * FROM "klasses" WHERE ("klasses"."startyear" = '2005') LIMIT 1[0m
+  [4;36;1mKlass Create (0.2ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, NULL, '2009-05-31 11:44:23', '2009-05-31 11:44:23')[0m
+  [4;35;1mChild Exists (0.0ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 11:44:23', '2009-05-31 11:44:23', 1, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.2ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:44:23', '2009-05-31 11:44:23', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:44:23', '2009-05-31 11:44:23', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:44:23', '2009-05-31 11:44:23', 0, 3, NULL, 1)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "account_types" [0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;36;1mAccount Destroy (0.1ms)[0m   [0;1mDELETE FROM "accounts" WHERE "id" = 1[0m
+  [4;35;1mAccount Destroy (0.0ms)[0m   [0mDELETE FROM "accounts" WHERE "id" = 2[0m
+  [4;36;1mAccount Destroy (0.0ms)[0m   [0;1mDELETE FROM "accounts" WHERE "id" = 3[0m
+  [4;35;1mChild Destroy (0.0ms)[0m   [0mDELETE FROM "children" WHERE "id" = 1[0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-31 11:44:34', '2009-05-31 11:44:34')[0m
+  [4;35;1mKlass Load (0.1ms)[0m   [0mSELECT * FROM "klasses" WHERE ("klasses"."startyear" = '2005') LIMIT 1[0m
+  [4;36;1mChild Exists (0.1ms)[0m   [0;1mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;35;1mChild Create (0.1ms)[0m   [0mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 11:44:34', '2009-05-31 11:44:34', 1, 'mads@buus.net')[0m
+  [4;36;1mAccountType Load (0.2ms)[0m   [0;1mSELECT * FROM "account_types" [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:44:34', '2009-05-31 11:44:34', 0, 1, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:44:34', '2009-05-31 11:44:34', 0, 2, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:44:34', '2009-05-31 11:44:34', 0, 3, NULL, 1)[0m
+  [4;36;1mChild Load (0.2ms)[0m   [0;1mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "account_types" [0m
+  [4;36;1mKlass Load (0.1ms)[0m   [0;1mSELECT * FROM "klasses" WHERE ("klasses"."startyear" = '2005') LIMIT 1[0m
+  [4;35;1mKlass Create (0.2ms)[0m   [0mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, NULL, '2009-05-31 11:44:34', '2009-05-31 11:44:34')[0m
+  [4;36;1mChild Exists (0.1ms)[0m   [0;1mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;35;1mChild Create (0.1ms)[0m   [0mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 11:44:34', '2009-05-31 11:44:34', 1, 'mads@buus.net')[0m
+  [4;36;1mAccountType Load (0.2ms)[0m   [0;1mSELECT * FROM "account_types" [0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:44:34', '2009-05-31 11:44:34', 0, 1, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:44:34', '2009-05-31 11:44:34', 0, 2, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:44:34', '2009-05-31 11:44:34', 0, 3, NULL, 1)[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;35;1mKlass Load (0.1ms)[0m   [0mSELECT * FROM "klasses" WHERE ("klasses"."startyear" = '2005') LIMIT 1[0m
+  [4;36;1mKlass Create (0.2ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, NULL, '2009-05-31 11:44:34', '2009-05-31 11:44:34')[0m
+  [4;35;1mChild Exists (0.0ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 11:44:34', '2009-05-31 11:44:34', 1, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.2ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:44:34', '2009-05-31 11:44:34', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:44:34', '2009-05-31 11:44:34', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:44:34', '2009-05-31 11:44:34', 0, 3, NULL, 1)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "account_types" [0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;36;1mAccount Destroy (0.1ms)[0m   [0;1mDELETE FROM "accounts" WHERE "id" = 1[0m
+  [4;35;1mAccount Destroy (0.0ms)[0m   [0mDELETE FROM "accounts" WHERE "id" = 2[0m
+  [4;36;1mAccount Destroy (0.0ms)[0m   [0;1mDELETE FROM "accounts" WHERE "id" = 3[0m
+  [4;35;1mChild Destroy (0.0ms)[0m   [0mDELETE FROM "children" WHERE "id" = 1[0m
+  [4;36;1mKlass Create (0.6ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-31 11:46:55', '2009-05-31 11:46:55')[0m
+  [4;35;1mKlass Load (0.1ms)[0m   [0mSELECT * FROM "klasses" WHERE ("klasses"."startyear" = '2005') LIMIT 1[0m
+  [4;36;1mChild Exists (0.2ms)[0m   [0;1mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;35;1mChild Create (0.1ms)[0m   [0mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 11:46:55', '2009-05-31 11:46:55', 1, 'mads@buus.net')[0m
+  [4;36;1mAccountType Load (0.2ms)[0m   [0;1mSELECT * FROM "account_types" [0m
+  [4;35;1mAccount Create (0.2ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:46:55', '2009-05-31 11:46:55', 0, 1, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:46:55', '2009-05-31 11:46:55', 0, 2, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:46:55', '2009-05-31 11:46:55', 0, 3, NULL, 1)[0m
+  [4;36;1mChild Load (0.2ms)[0m   [0;1mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "account_types" [0m
+  [4;36;1mKlass Load (0.1ms)[0m   [0;1mSELECT * FROM "klasses" WHERE ("klasses"."startyear" = '2005') LIMIT 1[0m
+  [4;35;1mKlass Create (0.2ms)[0m   [0mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, NULL, '2009-05-31 11:46:55', '2009-05-31 11:46:55')[0m
+  [4;36;1mChild Exists (0.0ms)[0m   [0;1mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;35;1mChild Create (0.1ms)[0m   [0mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 11:46:55', '2009-05-31 11:46:55', 1, 'mads@buus.net')[0m
+  [4;36;1mAccountType Load (0.2ms)[0m   [0;1mSELECT * FROM "account_types" [0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:46:55', '2009-05-31 11:46:55', 0, 1, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:46:55', '2009-05-31 11:46:55', 0, 2, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:46:55', '2009-05-31 11:46:55', 0, 3, NULL, 1)[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;35;1mKlass Load (0.1ms)[0m   [0mSELECT * FROM "klasses" WHERE ("klasses"."startyear" = '2005') LIMIT 1[0m
+  [4;36;1mKlass Create (0.2ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, NULL, '2009-05-31 11:46:55', '2009-05-31 11:46:55')[0m
+  [4;35;1mChild Exists (0.0ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 11:46:55', '2009-05-31 11:46:55', 1, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.2ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:46:55', '2009-05-31 11:46:55', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:46:55', '2009-05-31 11:46:55', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:46:55', '2009-05-31 11:46:55', 0, 3, NULL, 1)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "account_types" [0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;36;1mAccount Destroy (0.1ms)[0m   [0;1mDELETE FROM "accounts" WHERE "id" = 1[0m
+  [4;35;1mAccount Destroy (0.0ms)[0m   [0mDELETE FROM "accounts" WHERE "id" = 2[0m
+  [4;36;1mAccount Destroy (0.0ms)[0m   [0;1mDELETE FROM "accounts" WHERE "id" = 3[0m
+  [4;35;1mChild Destroy (0.0ms)[0m   [0mDELETE FROM "children" WHERE "id" = 1[0m
+  [4;36;1mAccount Exists (0.0ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mKlass Create (0.4ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, 'x', '2009-05-31 11:47:12', '2009-05-31 11:47:12')[0m
+  [4;35;1mKlass Load (0.1ms)[0m   [0mSELECT * FROM "klasses" WHERE ("klasses"."startyear" = '2005') LIMIT 1[0m
+  [4;36;1mChild Exists (0.1ms)[0m   [0;1mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;35;1mChild Create (0.1ms)[0m   [0mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 11:47:12', '2009-05-31 11:47:12', 1, 'mads@buus.net')[0m
+  [4;36;1mAccountType Load (0.2ms)[0m   [0;1mSELECT * FROM "account_types" [0m
+  [4;35;1mAccount Create (0.3ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:47:12', '2009-05-31 11:47:12', 0, 1, NULL, 1)[0m
+  [4;36;1mAccount Create (1.0ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:47:12', '2009-05-31 11:47:12', 0, 2, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:47:12', '2009-05-31 11:47:12', 0, 3, NULL, 1)[0m
+  [4;36;1mChild Load (0.3ms)[0m   [0;1mSELECT * FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "account_types" [0m
+  [4;36;1mKlass Load (0.1ms)[0m   [0;1mSELECT * FROM "klasses" WHERE ("klasses"."startyear" = '2005') LIMIT 1[0m
+  [4;35;1mKlass Create (0.2ms)[0m   [0mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, NULL, '2009-05-31 11:47:12', '2009-05-31 11:47:12')[0m
+  [4;36;1mChild Exists (0.1ms)[0m   [0;1mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;35;1mChild Create (0.1ms)[0m   [0mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 11:47:12', '2009-05-31 11:47:12', 1, 'mads@buus.net')[0m
+  [4;36;1mAccountType Load (0.2ms)[0m   [0;1mSELECT * FROM "account_types" [0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:47:12', '2009-05-31 11:47:12', 0, 1, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:47:12', '2009-05-31 11:47:12', 0, 2, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:47:12', '2009-05-31 11:47:12', 0, 3, NULL, 1)[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;35;1mKlass Load (0.1ms)[0m   [0mSELECT * FROM "klasses" WHERE ("klasses"."startyear" = '2005') LIMIT 1[0m
+  [4;36;1mKlass Create (0.2ms)[0m   [0;1mINSERT INTO "klasses" ("startyear", "name", "created_at", "updated_at") VALUES(2005, NULL, '2009-05-31 11:47:12', '2009-05-31 11:47:12')[0m
+  [4;35;1mChild Exists (0.0ms)[0m   [0mSELECT "children".id FROM "children" WHERE ("children"."name" = 'Mads') LIMIT 1[0m
+  [4;36;1mChild Create (0.1ms)[0m   [0;1mINSERT INTO "children" ("name", "address", "created_at", "updated_at", "klass_id", "email") VALUES('Mads', NULL, '2009-05-31 11:47:12', '2009-05-31 11:47:12', 1, 'mads@buus.net')[0m
+  [4;35;1mAccountType Load (0.2ms)[0m   [0mSELECT * FROM "account_types" [0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:47:12', '2009-05-31 11:47:12', 0, 1, NULL, 1)[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:47:12', '2009-05-31 11:47:12', 0, 2, NULL, 1)[0m
+  [4;36;1mAccount Create (0.1ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "total", "account_type_id", "atype", "child_id") VALUES('2009-05-31 11:47:12', '2009-05-31 11:47:12', 0, 3, NULL, 1)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "account_types" [0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".child_id = 1) [0m
+  [4;36;1mAccount Destroy (0.1ms)[0m   [0;1mDELETE FROM "accounts" WHERE "id" = 1[0m
+  [4;35;1mAccount Destroy (0.0ms)[0m   [0mDELETE FROM "accounts" WHERE "id" = 2[0m
+  [4;36;1mAccount Destroy (0.0ms)[0m   [0;1mDELETE FROM "accounts" WHERE "id" = 3[0m
+  [4;35;1mChild Destroy (0.0ms)[0m   [0mDELETE FROM "children" WHERE "id" = 1[0m
+  [4;36;1mAccount Exists (0.0ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."id" = 1) LIMIT 1[0m
+  [4;35;1mLine Load (0.1ms)[0m   [0mSELECT * FROM "lines" WHERE ("lines"."account_id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Exists (0.0ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;35;1mLine Load (0.1ms)[0m   [0mSELECT * FROM "lines" WHERE ("lines"."account_id" = 2) LIMIT 1[0m
+  [4;36;1mAccount Exists (0.0ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."id" = 3) LIMIT 1[0m
+  [4;35;1mLine Load (0.1ms)[0m   [0mSELECT * FROM "lines" WHERE ("lines"."account_id" = 3) LIMIT 1[0m

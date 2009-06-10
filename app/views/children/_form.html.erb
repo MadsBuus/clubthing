@@ -1,0 +1,26 @@
+<% form_for(@child) do |f| %>
+  <%= error_messages_for :child,
+ 	 :header_message => "Ups, prøv lige igen!",
+	 :message => "Der var problemer med nogle af felterne." %>	
+  <p>
+    <%= f.label :name, 'Navn' %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p class="half">
+    <%= f.label 'Klasse' %><br />
+	<%= f.select :klass_id, Klass.all(:order => 'startyear DESC, name').collect {|p| [ p.display, p.id ] }, {:include_blank => true } %>
+  </p>
+<div class="buttons">
+  <p class="half">
+    <%= f.submit 'OK' %>	
+  </p>
+  <p class="half">
+	<%= link_to 'Fortryd', children_path %>
+  </p>
+</div>
+	<br class="clearfix">
+<% end %>

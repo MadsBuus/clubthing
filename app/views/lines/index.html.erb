@@ -1,20 +1,22 @@
-<h1><%= @client.name %> (<%= @client.klass %>)</h1>
-<h2><%= @account.atype %></h2>
-<%= link_to '<<', @client %>
+<h1><%= @child.name %> (<%= @child.klass.display %>)</h1>
+<h2><%= @account.account_type.title %></h2>
+<%= link_to '<<', @child %>
 <table>
 	<tr>
 		<th>Dato</th>
 		<th>Note</th>
-		<th class="right">Ind</th>
-		<th class="right">Ud</th>
+		<th class="right">Indsat</th>
+		<th class="right">Hævet</th>
 		<th class="right">Total</th>
 	</tr>	
 <% start = 0 %>	
 <% @lines.each do |l| %>
 	<tr>
-		<td><%= l.created_at.to_s(:short) %> </td>
+		<td><%= l.created_at.localtime.to_s %> </td>
 		<td><%= l.comment %> </td>
-		<td class="right"><%= l.amount if l.amount > 0 %></td>
+		<td class="right">
+			<%= link_to l.amount, l if l.amount > 0%>
+		</td>
 		<td class="right"><%= l.amount if l.amount < 0 %></td>
 		<td class="right"><%= start += l.amount %></td>
 	</tr>

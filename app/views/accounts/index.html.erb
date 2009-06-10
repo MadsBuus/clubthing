@@ -3,8 +3,8 @@
 <table>
 <% @accounts.each do |account| %>
   <tr>
-    <td><%=h account.client.name if account.client %></td>
-    <td><%= link_to account.atype, client_account_lines_path(account.client, account) %></td>
+    <td><%=h account.child.name if account.child %></td>
+    <td><%= link_to account.atype, child_account_lines_path(account.child, account) %></td>
     <td><%=h account.total %></td>
 	</td>
   </tr>

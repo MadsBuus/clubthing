@@ -1,0 +1,23 @@
+<%= render :partial => 'finder' %>
+
+<h1>Børn</h1>
+
+<table>
+  <tr>
+    <th>Navn</th>
+    <th>Email</th>
+    <th>Klasse</th>
+  </tr>
+
+<% @children.each do |child| %>
+  <tr>
+    <td><%= link_to h(child.name), child %></td>
+		<td><%= mail_to child.email %>
+    <td><%=h child.klass.display %></td>
+    <td><%= link_to 'Ret', edit_child_path(child) %></td>
+    <td><%= link_to 'Slet', child, :confirm => 'Er du sikker på du vil slette (alle konti m.v. slettes)?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+<%= link_to 'Opret nyt...', new_child_path %>

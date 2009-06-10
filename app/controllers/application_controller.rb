@@ -7,4 +7,14 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+  include SimplestAuth::Controller
+
+  before_filter :authorized
+
+  def authorized
+    #TODO apply better place for this
+    logger.info(controller_name)
+    logger.info(action_name)
+    redirect_to new_session_path unless logged_in? || controller_name == 'sessions'
+  end
 end

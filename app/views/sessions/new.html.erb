@@ -1,0 +1,31 @@
+<div style="text-align:center">
+<h1>Bodenhoff fritidscenter</h1>
+</div>
+
+<div style="width: 50%; float: left">
+	<%= image_tag 'content_icon_1813.jpg' %>
+</div>
+<div style="width: 50%; float: left">
+
+<h3>Indtast brugernavn og adgangskode</h3>
+<% form_tag sessions_path, :method => :post do %>
+
+<div class="half">
+  <%= text_field :session, :name, :value => @name, :autocomplete => 'off' %>
+</div>
+<div class="half">
+  <%= password_field :session, :password %>
+</div>
+
+<div class="buttons">
+  <%= submit_tag 'Login' %>
+</div>
+
+<script type="text/javascript">
+	$('<%= @name ? 'session_password' : 'session_name' -%>').focus();
+</script>
+
+</div>
+<br class="clearfix"/>
+
+<% end -%>

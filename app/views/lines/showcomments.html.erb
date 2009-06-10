@@ -1,0 +1,24 @@
+<h2>Følgende tilmeldingslister har været brugt:</h2>
+
+<em>klik en beskrivelse for at se tilmeldte</em>
+<ul>
+<% @comments.each do |linecomment| %>
+    <li><%= link_to linecomment.comment, :comment => linecomment.comment %></li>
+<% end -%>
+</ul>
+                                      
+<% if @comment %>                  
+  
+<h2><%= @comment %></h2>
+	
+	<table class="list">		
+	<% @attendees.each do |a| %>
+	<tr>
+		<td>
+			<%= link_to a.name, a %> <%= a.klass.display %>
+		</td>
+	</tr>
+	<% end -%>
+	</table>
+	<hr/>
+<% end -%>

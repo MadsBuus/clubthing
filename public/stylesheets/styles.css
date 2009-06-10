@@ -1,15 +1,25 @@
 body {
-background-color: #2CA3CB;
-border: 0;
-margin: 0;
-font-family: tahoma;
-font-size: 24px;
-color: white;
+	background-color: #2CA3CB;
+	border: 0;
+	margin: 0;
+	font-family: tahoma;
+	font-size: 20px;
+	color: white;
 }
 
 h1, h2 {
-	margin-top:0;
-	padding-top:0;
+	margin-top: 0;
+	margin-bottom: 10px;
+	padding-top: 0;
+}
+
+a {
+	color: #003399;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 table {
@@ -17,7 +27,8 @@ table {
 }
 
 th.right, td.right {
-	text-align:right;
+	text-align: left; 
+	width: 30px; 
 }
 
 td.topline {
@@ -25,22 +36,22 @@ td.topline {
 }
 
 #fixedframe {
-position: fixed;
-top: 1%;
-bottom: 1%;
-left: 1%;
-right: 1%;
-padding: 0px;
-background-color: black;
--webkit-border-radius: 40px;
--moz-border-radius: 40px;
-border-radius: 40px;
-border: 1% solid black;
+	position: fixed;
+	top: 1%;
+	bottom: 1%;
+	left: 1%;
+	right: 1%;
+	padding: 0px;
+	background-color: black;
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+	border: 1% solid black;
 }
 
 #frame {
 	padding: 40px;
-	color:black;
+	color: black;
 	background-color: white;
 	-webkit-border-radius: 40px;
 	-moz-border-radius: 40px;
@@ -51,130 +62,277 @@ border: 1% solid black;
 	margin: 1%;
 }
 
-.rcol, .mcol, .lcol {
--webkit-border-radius: 40px;
--moz-border-radius: 40px;
-border-radius: 40px;
-position: fixed;
-top: 20%;
-bottom: 20px;
-width: 28%;
-padding: 2%;
-background-position: top center;
-background-repeat: no-repeat;
+.col2 a, .col1 a, .col3 a { color: white;}
+
+.col2, .col1, .col3 {
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+	position: fixed;
+	top: 36%;
+	bottom: 20px;
+	width: 28%;
+	padding: 2%;
+	background-position: center 20px;
+	background-repeat: no-repeat;
 }
 
-.rcol {
-right: 2%;
-float: right;
-background-color: #74A629;
-background-image: url('/images/bus2s.png');
+.col3 {
+	right: 2%;
+	float: right;
+	background-color: #74A629;
+	background-image: url('/images/bus2s.png');
 }
 
-.mcol {
-position: fixed;
-left: 34%;
-right: 35%;
-background-color: #FC9B00;
-background-image: url('/images/lunch2.png');
+.col1 {
+	position: fixed;
+	left: 34%;
+	right: 35%;
+	background-color: #FC9B00;
+	background-image: url('/images/lunch2.png');
 }
 
-.lcol {
-left: 2%;
-float: left;
-background-color: #334C84;
-background-image: url('/images/fruit2s.png');
+.col2 {
+	left: 2%;
+	float: left;
+	background-color: #334C84;
+	background-image: url('/images/fruit2s.png');
 }
 
 #banner {
-/* text-align: center; */
-position: fixed;
-top: 2%;
-right: 2%;
-left: 2%;
-padding: 0 0 2% 0;
-background-color: black;
-color: white;
+	/* text-align: center; */
+	position: fixed;
+	top: 2%;
+	right: 2%;
+	left: 2%;
+	padding: 0 0 2% 0;
+/*	background-color: black; */
+	color: white;
 }
 
 #banner h1 {
-	float:left;
+	margin-top: 10px;
 }
 
-form.change_client {
-	float:right;
-	margin-top: 40px;
+form.change_child {
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px; 
+/*	float:right; */
 }
 
-form.change_client input {
-font-size: 120%;
-background-color: #eee;
-border:0;
-color: black;
+/*
+form.change_child input {
+	font-size: 120%;
+	background-color: #aaa;
+	border: 0;
+	color: black;
+}
+
+form.change_child input.search {
+	background-color: #aaa;
+}
+*/
+.lineinput {
+	text-align:center;
+	font-size: 90%;
 }
 
 .total {
-margin-top: 150px;
-text-align: center;
-font-size: 300%;
+	margin-top: 150px;
+	text-align: center;
+	font-size: 300%;
 }
 
 .input {
-margin-top: 50px;
-text-align: center;
+	margin-top: 50px;
 }
 
-.input input {
-font-size: 300%;
-width: 100%;
-text-align: center;
+.buttons, .clearfix {
+	clear: both;
+	padding-top: 30px;
 }
+
+input, select, form a {
+	width: 100%;
+	font-size: 200%;
+	border: 2px solid #eee;	
+}
+
+select {
+	font-size: 150%;	
+}
+
+form a {
+	display:block;
+	background-color: #eee;
+}
+
+form a:hover {
+	text-decoration: none;
+}
+
+.round {
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;	
+}
+
+input[type="submit"], form a {
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	background-color: #ddd;
+	border: 2px solid #999;
+	text-align:center;
+	padding:2px;
+	color: black;
+	margin-right: 10px;
+}
+
+.full { width: 100%; }
+.threeq { width: 70%; margin-right: 5%; float: left;}
+.half { width: 45%; margin-right: 5%; float: left;}
+.quarter { width: 25%; float: left;}
 
 div.auto_complete {
-width: 350px;
-background: #fff;
-z-index:100;
-color: black;
+	width: 350px;
+	background: #fff;
+	z-index: 100;
+	color: black;
+}
+
+ul {
+	list-style-type: none;
 }
 
 div.auto_complete ul {
-border: 1px solid #888;
-margin: 0;
-padding: 0;
-width: 100%;
-list-style-type: none;
+	border: 1px solid #888;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	list-style-type: none;
 }
 
 div.auto_complete ul li {
-margin: 0;
-padding: 3px;
+	margin: 0;
+	padding: 3px;
 }
 
 div.auto_complete ul li.selected {
-background-color: #ffb;
+	background-color: #ffb;
 }
 
 div.auto_complete ul strong.highlight {
-color: #800;
-margin: 0;
-padding: 0;
+	color: #800;
+	margin: 0;
+	padding: 0;
 }
 
 .account_info {
-	margin-top: -30px;
-	display:block;
-	float:right;
+	margin-top: -22px; /* hmm, why is this sometimes necessary? */
+	display: block;
+	float: right;
 	color: #999;
-	font-size:80%;
-	font-family:monospace;
+	font-size: 80%;
+	font-family: monospace;
 }
 
 .neg {
 	white-space: pre;
-	color:red;
+	color: red;
 }
 .pos {
 	white-space: pre;
-	color:#999;
+	color: #999;
 }
 
+table.list {
+	width: 100%;
+	border-top: 1px solid #ccc;	
+}
+
+table.list td {
+	border-bottom: 1px solid #ccc;
+}
+
+.right td, .right th, td.right, th.right {
+	text-align:right;
+}
+
+.footbar {
+	float:right;
+	margin-right: 50px;
+}
+
+.notice {
+  background-color:#EAFFE8;
+  border:1px solid #8BFF7F;
+}
+
+.warning {
+  background-color:#FFFFE8;
+  border:1px solid #FFFF7F;
+}
+
+.errorExplanation, .error {
+  background-color:#FFEAE8;
+  border:1px solid #FF8B7F;
+}
+
+.errorExplanation, .notice,  .warning, .error {
+     color:#000;
+     text-align:left;
+     vertical-align:top;
+     padding-top:5px;
+     padding-left:20px;
+     padding-bottom:10px;
+     margin-top:3px;
+     margin-bottom:10px;
+}
+
+.errorExplanation h2 {
+     color:#F0775E;
+}
+
+.errorExplanation ul {
+     list-style-type: disc;
+     list-style-image: url(../images/icons/exclamation.png);
+     list-style-position: inside;
+     margin:15px
+     padding:3px;
+}
+
+.fieldWithErrors input[type="text"],
+.fieldWithErrors input[type="password"],
+.fieldWithErrors select {
+	border-color:#FF8B7F !important;
+}
+
+#overlay {
+	top: 25%;
+	left:25%;
+	position: fixed;
+	z-index: 200;
+	width: 50%;
+	height: 25%;	
+}
+
+#overlay .notice, #overlay .warning, #overlay .error {
+	font-size: 300%;
+	text-align:center;
+  padding: 8%;
+}
+
+#overlay .notice {
+  border:10px solid #8BFF7F;
+}
+
+#overlay .error {
+  border:10px solid #FF8B7F;
+}
+
+#overlay .warning {
+  border:10px solid #FFFF7F;
+}

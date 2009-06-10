@@ -1,0 +1,23 @@
+<% form_for(@klass) do |f| %>
+<%= error_messages_for :klass,
+ :header_message => "Ups, prøv lige igen!",
+ :message => "Der var problemer med nogle af felterne." %>	
+  <div class="half">
+    <%= f.label :startyear, "Årgang (f.eks. #{Date.today.year - 3})" %><br />
+    <%= f.text_field :startyear %>
+  </div>
+  <div class="half">
+    <%= f.label :name, "Spor (f.eks. 'x')" %><br />
+    <%= f.text_field :name %>
+  </div>
+<div class="buttons">
+  <div class="half">
+    <%= f.submit 'OK' %>
+  </div>
+	<div class="half">
+		<%= link_to 'Fortryd', klasses_path %>
+	</div>
+</div>
+<br class="clearfix"/>
+
+<% end %>

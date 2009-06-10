@@ -1,0 +1,7 @@
+<ul><% @matches.each do |child| %>
+	<li><%= highlight(child.name, @pattern) -%><span class="informal"> (<%= child.klass.display %>)</span><span class="account_info informal">
+		<% child.accounts.each do |account|  %>
+			<%= revisor account.total -%>
+		<% end -%>
+</span></li>
+<% end -%></ul>

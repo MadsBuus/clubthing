@@ -1,0 +1,17 @@
+<h1><%= @description %></h1>
+Pris per deltager: <%= @price %><br/>
+Konto: <%= @account_type.title %><br/>	
+	<hr/>
+	Tilmeldte:
+	
+	<table class="list">
+	<% @attendees.each do |a| %>
+	<tr>
+		<td>
+			<%= link_to a.name, a %> <%= a.klass.display %>
+		</td>
+	</tr>
+	<% end -%>
+	</table>
+	<hr/>
+

@@ -4,16 +4,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Clients: <%= controller.action_name %></title>
+  <title>children: <%= controller.action_name %></title>
   <%= stylesheet_link_tag 'styles' %>
   <%= javascript_include_tag :all %>
 </head>
-<body>
+<body onkeyup="if(event.keyCode=='27'){ window.location.href='<%= logout_sessions_path %>' }">
+	<%= render :partial => 'shared/navi' %>  
+	<br class="clearfix" />
 	<div id="frame">
-		<% if flash[:notice] %>
-			<p style="color: green"><%= flash[:notice] %></p>
-		<% end %>
-		<%= yield %>		
-	</div>
+		<%= flash_messages %>
+		<%= yield %>				
+	</div> 
+	<%= render :partial => 'shared/navi' %>	
 </body>
 </html>

@@ -1,13 +1,23 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :clients do |c|
+  map.resources :account_types
+
+  map.resources :klasses do |k|
+    k.resources :children
+  end
+
+  map.resources :children do |c|
     c.resources :accounts, :member => { :recalc_total => :get} do |a|
       a.resources :lines
     end
   end
   
+  map.list 'list', :controller => 'account_types', :action => 'list', :method => :get
+  map.multiline 'multiline', :controller => 'account_types', :action => 'multiline', :method => :post
+  
   map.resources :lines
   map.resources :accounts
-
+  map.resources :sessions, :collection => { :logout => :get }
+  
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
@@ -40,7 +50,7 @@ ActionController::Routing::Routes.draw do |map|
   #   end
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-  # map.root :controller => "welcome"
+  map.root :controller => "sessions"
 
   # See how all your routes lay out with "rake routes"
 

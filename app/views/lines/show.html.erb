@@ -1,0 +1,19 @@
+<h1>Kvittering for modtagelse</h1>
+
+<h2>Dato: <%= @line.date.to_s %></h2> 
+
+Navn: <%= @line.account.child.name %><br/><br/>
+
+Konto: <%= @line.account.account_type.title %><br/><br/>
+
+Beløb: <%= @line.amount %>,-<br/><br/>
+
+Klubbens underskrift : ____________________________________<br/>
+<br/>
+
+<script type="text/javascript">
+	window.print();
+</script>
+
+<hr/>
+<%= link_to "Tilbage", @line.account.child %>

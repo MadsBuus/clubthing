@@ -1,0 +1,36 @@
+<h1>Konti</h1>
+
+<% prevdate = '' %>
+<% prevac = 0 %>                 
+<table class="right">
+	<tr> 
+		<th>Dato</th>
+		<% AccountType.all.each do |at| %>
+			<th><%= at.title %></th>
+		<% end -%>
+		
+<% @grouped_result.each do |record| %>   
+	<% if(record['date'] != prevdate) %>
+
+	<% dif = 3 - prevac %>
+	<% dif.times do %>
+	    <td></td>
+	<% end %>
+				
+			<% prevac = 0 %>
+		</tr>
+		<tr>
+	    <td><%= record['date'].to_date.to_s %></td>
+	<% end -%>
+	  
+	<% dif = record['account_type_id'].to_i - (prevac+1) %>
+	<% dif.times do %>
+	    <td></td>
+	<% end %> 
+	
+			<td><%= record['sum'] %></td>						                            
+			<% prevdate = record['date'] %>
+			<% prevac = record['account_type_id'].to_i %>
+<% end -%>
+</tr>
+</table>                                       

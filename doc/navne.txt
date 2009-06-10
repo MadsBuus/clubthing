@@ -1,0 +1,79 @@
+first_names = %w(Jens Peter Lars Michael Niels Hans Søren Henrik Jørgen Thomas Jan Erik Martin Ole Christian Per Anders Morten Kirsten Anne Hanne Mette Anna Helle Karen Susanne Lene Inge Inger Else Marianne Bente Lone Maria Jette Pia)
+
+last_names = %w(Jensen Nielsen Hansen Pedersen Andersen Christensen Larsen Sørensen Rasmussen Jørgensen Petersen Madsen Kristensen Olsen Thomsen Christiansen Poulsen Johansen) 
+
+
+
+
+1 	Jens 	56.021 	  	 	Kirsten 	49.262 	  	1 	Jensen 	300.351
+2 	Peter 	52.036 	  	2 	Anne 	48.611 	  	2 	Nielsen 	294.561
+3 	Lars 	47.715 	  	3 	Hanne 	42.275 	  	3 	Hansen 	246.657
+4 	Michael 	46.081 	  	4 	Mette 	39.653 	  	4 	Pedersen 	185.266
+5 	Niels 	44.951 	  	5 	Anna 	38.491 	  	5 	Andersen 	172.126
+6 	Hans 	44.795 	  	6 	Helle 	35.232 	  	6 	Christensen 	131.991
+7 	Søren 	44.246 	  	7 	Karen 	33.749 	  	7 	Larsen 	128.750
+8 	Henrik 	44.241 	  	8 	Susanne 	32.708 	  	8 	Sørensen 	123.383
+9 	Jørgen 	43.817 	  	9 	Lene 	32.215 	  	9 	Rasmussen 	103.552
+10 	Thomas 	41.931 	  	10 	Inge 	31.747 	  	10 	Jørgensen 	97.671
+11 	Jan 	40.906 	  	11 	Inger 	30.181 	  	11 	Petersen 	91.219
+12 	Erik 	37.930 	  	12 	Else 	29.117 	  	12 	Madsen 	69.704
+13 	Martin 	37.161 	  	13 	Marianne 	28.216 	  	13 	Kristensen 	64.922
+14 	Ole 	37.026 	  	14 	Bente 	27.129 	  	14 	Olsen 	53.613
+15 	Christian 	36.086 	  	15 	Lone 	26.606 	  	15 	Thomsen 	40.447
+16 	Per 	35.692 	  	16 	Maria 	26.348 	  	16 	Christiansen 	39.892
+17 	Anders 	35.142 	  	17 	Jette 	25.012 	  	17 	Poulsen 	34.074
+18 	Morten 	34.794 	  	18 	Pia 	24.970 	  	18 	Johansen 	32.973
+
+
+ Frederik 	936 	28 	(3)
+ Mikkel 	449 	28 	(2)
+Mathias 	873 	26 	(4)
+Oliver 	820 	25 	(8)
+Mads 	807 	24 	(2)
+Magnus 	800 	24 	(7)
+Christian 	798 	24 	(5)
+Lucas 	794 	24 	(11)
+Nikolaj 	784 	24 	(12)
+	Rasmus 	775 	23 	(10)
+	Emil 	741 	22 	(6)
+	Jonas 	696 	21 	(14)
+	Jacob 	676 	20 	(17)
+	Victor 	669 	20 	(13)
+	Marcus 	655 	20 	(15)
+	Tobias 	653 	20 	(9)
+	Kasper 	630 	19 	(18)
+	Sebastian 	590 	18 	(20)
+	Simon 	571 	17 	(19)
+	Andreas 	527 	16 	(16)
+	Nicklas 	486 	15 	(21)
+	Noah 	432 	13 	(40)
+	Alexander 	424 	13 	(23)
+	William 	419 	13 	(26)
+	Daniel 	401 	12 	(22)
+	Gustav 	397 	12 	(31)
+	Malthe 	393 	12 	(35)
+	Benjamin 	392 	12 	(29)
+	Christoffer 	380 	11 	(24)
+	Philip 	379 	11 	(30)
+	Oscar 	354 	11 	(28)
+	Lasse 	331 	10 	(27)
+	Jeppe 	305 	9 	(32)
+	Anton 	297 	9 	(41)
+	Anders 	296 	9 	(25)
+	Jonathan 	257 	8 	(39)
+	Patrick 	229 	7 	(33)
+	Martin 	228 	7 	(36)
+	Carl 	222 	7 	(37)
+	Thomas 	219 	7 	(34)
+	Marius 	204 	6 	(42)
+	Peter 	204 	6 	(38)
+	August 	186 	6 	(45)
+	Mohammad 	182 	5 	(47)
+	Valdemar 	180 	5 	(ny)
+	Julius 	162 	5 	(ny)
+	Asger 	161 	5 	(44)
+	Silas 	161 	5 	(ny)
+	David 	152 	5 	(ny)
+	Laurits 	151 	5 	(48)
+
+

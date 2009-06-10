@@ -2,7 +2,7 @@ class AccountsController < ApplicationController
   # GET /accounts
   # GET /accounts.xml
   def index
-    @accounts = Account.all(:include => :client, :order => 'client_id, atype')
+    @accounts = Account.all(:include => :child, :order => 'child_id, atype')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -87,6 +87,6 @@ class AccountsController < ApplicationController
     @account = Account.find(params[:id])
     @account.recalc_total
     @account.save
-    redirect_to @account.client
+    redirect_to @account.child
   end  
 end

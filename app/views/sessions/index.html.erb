@@ -1,0 +1,12 @@
+<div style="text-align:center">
+<h1>Bodenhoff fritidscenter</h1>
+
+<div style="margin:auto">
+	<%= image_tag 'content_icon_1813.jpg' %>
+</div>
+
+<%= link_to "Børn", children_path %> |
+<%= link_to "Klasser", klasses_path %> |
+<%= link_to "Statistik", account_types_path %><br/>
+<%= link_to "Log ind", new_session_path unless logged_in? %>
+</div>

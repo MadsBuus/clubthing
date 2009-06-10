@@ -1,0 +1,40 @@
+<% form_tag multiline_path do %>
+	<p class="half">
+	Konto: <%= collection_select(:list, :account_type, AccountType.all, :id, :title) %>	
+	</p>
+	<p class="half">
+	Pris <%= text_field 'list', 'price' %>
+	</p>
+	Beskrivelse (Denne beskrivelse vil fremgå som kommentar på kontoudtog) <%= text_field 'list', 'name' %><br/>
+	<hr/> 
+	Afkryds tilmeldinger direkte eller udskriv denne liste ved knap nederst...
+	<hr/>
+	
+	<% @klasses.each do |klass| %>
+		<% next if klass.children.count == 0 %>
+		<h2><%= klass.display %></h2>
+		<ul>			
+		<% klass.children.each do |pupil| %>
+			<li>
+				<label>
+					<%= check_box_tag 'list[child][]', pupil.id %>
+					<%= pupil.name %>
+					</label>
+					</li>
+		<% end -%>
+		</ul>
+	<% end -%>
+	<hr/>
+	<div class="buttons">
+		<p class="full">
+			<%= submit_tag 'Udskriv tilmeldingsliste' %> 
+		</p>		
+		<p class="half">
+			<%= submit_tag 'Træk beløb', :confirm => 'Beløb bliver nu trukket på alle afkrydsede. Ok?' %> 
+		</p>
+		<p class="half">
+			<%= link_to 'Tilbage', children_path %>
+		</p>
+	</div>
+	<br class="clearfix"/>
+<% end -%>

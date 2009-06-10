@@ -702,7 +702,7 @@ Effect.SlideDown = function(element) {
     },
     afterUpdateInternal: function(effect) {
       effect.element.down().setStyle({bottom:
-        (effect.dims[0] - effect.element.clientHeight) + 'px' });
+        (effect.dims[0] - effect.element.childHeight) + 'px' });
     },
     afterFinishInternal: function(effect) {
       effect.element.undoClipping().undoPositioned();
@@ -730,7 +730,7 @@ Effect.SlideUp = function(element) {
     },
     afterUpdateInternal: function(effect) {
       effect.element.down().setStyle({bottom:
-        (effect.dims[0] - effect.element.clientHeight) + 'px' });
+        (effect.dims[0] - effect.element.childHeight) + 'px' });
     },
     afterFinishInternal: function(effect) {
       effect.element.hide().undoClipping().undoPositioned();

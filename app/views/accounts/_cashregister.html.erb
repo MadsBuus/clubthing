@@ -1,0 +1,9 @@
+<div class="col<%= account.account_type.id %>">
+	<%= account.account_type.title %>
+	<div class="total">
+		<%= format_amount account.total %>
+	</div>
+	<%= render :partial => 'lines/line', :object => account %>
+	<br/>
+	<%= link_to 'Detaljer >>', child_account_lines_path(@child, account) %>
+</div>

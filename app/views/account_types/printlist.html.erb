@@ -1,0 +1,25 @@
+<h1><%= @description %></h1>
+Pris per deltager: <%= @price %><br/>
+Konto: <%= @account_type.title %><br/>	
+	<hr/>
+	<% @klasses.each do |klass| %>
+		<% next if klass.children.count == 0 %>
+		<h2><%= klass.display %></h2>
+		<table class="list" border="1" width="100%">			
+		<% klass.children.each do |pupil| %>
+			<tr>
+				<td width="30px">
+					&nbsp;
+				</td>
+				<td>
+					<%= pupil.name %>
+				</td>
+			</tr>
+		<% end -%>
+		</table>
+	<% end -%>
+	<hr/>
+	Denne liste indtastes efterfølgende i systemet.
+	<script type="text/javascript">
+		window.print();
+	</script>
