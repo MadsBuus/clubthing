@@ -84,7 +84,7 @@ td.topline {
 	background-image: url('/images/bus2s.png');
 }
 
-.col1 {
+.col2 {
 	position: fixed;
 	left: 34%;
 	right: 35%;
@@ -92,7 +92,7 @@ td.topline {
 	background-image: url('/images/lunch2.png');
 }
 
-.col2 {
+.col1 {
 	left: 2%;
 	float: left;
 	background-color: #334C84;

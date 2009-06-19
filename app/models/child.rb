@@ -1,5 +1,5 @@
 class Child < ActiveRecord::Base
-  has_many :accounts, :dependent => :destroy  
+  has_many :accounts, :dependent => :destroy, :order => 'id'  
   has_many :lines, :through => :accounts
   belongs_to :klass
   validates_presence_of :name, :klass, :message => 'skal udfyldes'
