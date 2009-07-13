@@ -1,16 +1,20 @@
-<h1>Editing account_type</h1>
+<h1>Ret kontotype</h1>
 
 <% form_for(@account_type) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :string %><br />
-    <%= f.text_field :string %>
+    <%= f.label :title, 'Kontotype' %><br />
+    <%= f.text_field :title %>
   </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+	<div class="buttons">
+	  <div class="half">
+	    <%= f.submit 'OK' %>
+	  </div>
+		<div class="half">
+			<%= link_to 'Fortryd', account_types_path %>
+		</div>
+	</div>
+	<br class="clearfix"/>
 
-<%= link_to 'Show', @account_type %> |
-<%= link_to 'Back', account_types_path %>
+<% end %>

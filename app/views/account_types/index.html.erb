@@ -2,11 +2,11 @@
 
 <% prevdate = '' %>
 <% prevac = 0 %>                 
-<table class="right">
+<table class="right list">
 	<tr> 
 		<th>Dato</th>
 		<% AccountType.all.each do |at| %>
-			<th><%= at.title %></th>
+			<th><%= link_to at.title, account_type_path(at) %></th>
 		<% end -%>
 		
 <% @grouped_result.each do |record| %>   

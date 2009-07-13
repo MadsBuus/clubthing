@@ -17,7 +17,7 @@
 		<% klass.children.each do |pupil| %>
 			<li>
 				<label>
-					<%= check_box_tag 'list[child][]', pupil.id %>
+					<%= check_box_tag 'list[child][]', pupil.id, :class => 'chechbox' %>
 					<%= pupil.name %>
 					</label>
 					</li>

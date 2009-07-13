@@ -89,14 +89,14 @@ td.topline {
 	left: 34%;
 	right: 35%;
 	background-color: #FC9B00;
-	background-image: url('/images/lunch2.png');
+	background-image: url('/images/fruit2s.png');
 }
 
 .col1 {
 	left: 2%;
 	float: left;
 	background-color: #334C84;
-	background-image: url('/images/fruit2s.png');
+	background-image: url('/images/lunch2.png');
 }
 
 #banner {
@@ -159,6 +159,11 @@ input, select, form a {
 	font-size: 200%;
 	border: 2px solid #eee;	
 }
+
+input.checkbox {
+	width: auto;
+	font-size: 100%;
+}         
 
 select {
 	font-size: 150%;	
@@ -231,20 +236,30 @@ div.auto_complete ul strong.highlight {
 }
 
 .account_info {
-	margin-top: -22px; /* hmm, why is this sometimes necessary? */
+	/* margin-top: -22px; */ /* hmm, why is this sometimes necessary? */
 	display: block;
 	float: right;
 	color: #999;
-	font-size: 80%;
+	font-size: 80%;    
+	margin-top: 4px;
 	font-family: monospace;
+}         
+
+.account_info span {
+	width: 60px !important;  
+	float: right;
+	display: block;
+	text-align: right; 
 }
 
+
+
 .neg {
-	white-space: pre;
+	/*white-space: pre;*/
 	color: red;
 }
 .pos {
-	white-space: pre;
+	/*white-space: pre;    */
 	color: #999;
 }
 
@@ -304,7 +319,7 @@ table.list td {
      padding:3px;
 }
 
-.fieldWithErrors input[type="text"],
+.fieldWithErrors [type="text"],
 .fieldWithErrors input[type="password"],
 .fieldWithErrors select {
 	border-color:#FF8B7F !important;

@@ -4,7 +4,8 @@ class LinesController < ApplicationController
     if(params[:child_id])
       @child = Child.find(params[:child_id])
       @account = Account.find(params[:account_id], :include => :lines)
-      @lines = @account.lines.find(:all, :limit => 100).reverse
+      @lines = @account.lines.recent
+      @oldsum = @account.lines.old.sum(:amount)
     else
       #global lines link, show possible comments...
       @comments = Line.find(:all, :select =>  'distinct comment', :conditions => "comment is not null and comment != ''", :order => 'created_at desc')
@@ -14,6 +15,16 @@ class LinesController < ApplicationController
         @comment = params[:comment] if @attendees.length > 0
       end
       render :action => 'showcomments'
+    end
+  end
+       
+  def all
+    if(params[:child_id])
+      @child = Child.find(params[:child_id])
+      @account = Account.find(params[:account_id], :include => :lines)
+      @lines = @account.lines.all.reverse     
+      @oldsum = 0
+      render :index
     end
   end
 

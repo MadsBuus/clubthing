@@ -1,6 +1,7 @@
 <h1><%= @child.name %> (<%= @child.klass.display %>)</h1>
 <h2><%= @account.account_type.title %></h2>
-<%= link_to '<<', @child %>
+<%= link_to '<<', @child %>       
+
 <table>
 	<tr>
 		<th>Dato</th>
@@ -9,13 +10,13 @@
 		<th class="right">Hævet</th>
 		<th class="right">Total</th>
 	</tr>	
-<% start = 0 %>	
+<% start = @oldsum %>	
 <% @lines.each do |l| %>
 	<tr>
 		<td><%= l.created_at.localtime.to_s %> </td>
 		<td><%= l.comment %> </td>
 		<td class="right">
-			<%= link_to l.amount, l if l.amount > 0%>
+			<%= link_to l.amount, l if l.amount > 0 %>
 		</td>
 		<td class="right"><%= l.amount if l.amount < 0 %></td>
 		<td class="right"><%= start += l.amount %></td>
@@ -29,3 +30,5 @@
 		<td class="right topline"><%= @account.total %></td>
 	</tr>
 </table>
+
+<%= link_to ('Vis alle linier (kan tage tid)', all_child_account_lines_path(@child, @account)) if @oldsum > 0 %>       

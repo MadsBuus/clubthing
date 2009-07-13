@@ -1,5 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :account_types
+  map.resources :account_types, :member => {:find_below => :get} do |ac|
+    
+  end
 
   map.resources :klasses do |k|
     k.resources :children
@@ -7,7 +9,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :children do |c|
     c.resources :accounts, :member => { :recalc_total => :get} do |a|
-      a.resources :lines
+      a.resources :lines, :collection => { :all => :get}
     end
   end
   

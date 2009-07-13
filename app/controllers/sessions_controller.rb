@@ -18,8 +18,8 @@ class SessionsController < ApplicationController
     end
   end
   
-  def logout
-    name = self.current_user.name
+  def logout    
+    name = self.current_user.name if logged_in?
     self.current_user = nil
     respond_to do |format|    
       flash[:notice] = "Du er nu logget ud."  

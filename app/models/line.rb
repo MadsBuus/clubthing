@@ -23,16 +23,20 @@ class Line < ActiveRecord::Base
   validates_presence_of :amount, :on => :create, :message => "Tal skal angives (Skriv + foran for at sætte penge ind)"
   validates_numericality_of :amount, :on => :create,
     :less_than_or_equal_to => 1000, :greater_than_or_equals_to => -1000, :message => "ugyldig talværdi"
+                                                      
+  RECENT_THRESHOLD = 1.month.ago
+  named_scope :recent, :conditions => ['created_at > ?', RECENT_THRESHOLD]    
+  named_scope :old, :conditions => ['created_at <= ?', RECENT_THRESHOLD]    
 
   def deposit
     account.transaction do
-      save
+      self.save!
       account.total += amount
-      account.save
+      account.save!
     end
   end
   
   def before_save
-    self.date = Time.today
+    self.date = Date.today
   end
 end
