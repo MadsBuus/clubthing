@@ -1953,8 +1953,8 @@ Element.Methods = {
     els.visibility = 'hidden';
     els.position = 'absolute';
     els.display = 'block';
-    var originalWidth = element.childWidth;
-    var originalHeight = element.childHeight;
+    var originalWidth = element.clientWidth;
+    var originalHeight = element.clientHeight;
     els.display = originalDisplay;
     els.position = originalPosition;
     els.visibility = originalVisibility;
@@ -2040,8 +2040,8 @@ Element.Methods = {
     var offsets = element.positionedOffset();
     var top     = offsets[1];
     var left    = offsets[0];
-    var width   = element.childWidth;
-    var height  = element.childHeight;
+    var width   = element.clientWidth;
+    var height  = element.clientHeight;
 
     element._originalLeft   = left - parseFloat(element.style.left  || 0);
     element._originalTop    = top  - parseFloat(element.style.top || 0);
@@ -2695,10 +2695,10 @@ document.viewport = {
         // Safari <3.0 needs self.innerWidth/Height
         dimensions[d] = self['inner' + D];
       } else if (B.Opera && parseFloat(window.opera.version()) < 9.5) {
-        // Opera <9.5 needs document.body.childWidth/Height
-        dimensions[d] = document.body['child' + D]
+        // Opera <9.5 needs document.body.clientWidth/Height
+        dimensions[d] = document.body['client' + D]
       } else {
-        dimensions[d] = document.documentElement['child' + D];
+        dimensions[d] = document.documentElement['client' + D];
       }
     });
     return dimensions;
@@ -3873,12 +3873,12 @@ Event.Methods = (function() {
       var docElement = document.documentElement,
       body = document.body || { scrollLeft: 0, scrollTop: 0 };
       return {
-        x: event.pageX || (event.childX +
+        x: event.pageX || (event.clientX +
           (docElement.scrollLeft || body.scrollLeft) -
-          (docElement.childLeft || 0)),
-        y: event.pageY || (event.childY +
+          (docElement.clientLeft || 0)),
+        y: event.pageY || (event.clientY +
           (docElement.scrollTop || body.scrollTop) -
-          (docElement.childTop || 0))
+          (docElement.clientTop || 0))
       };
     },
 
