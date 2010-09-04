@@ -6,7 +6,10 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>children: <%= controller.action_name %></title>
   <%= stylesheet_link_tag 'styles' %>
-  <%= javascript_include_tag :all %>
+  <%= javascript_include_tag :all %> 
+  <script type="text/javascript">
+    document.observe("dom:loaded", function() { $('child_name').focus() });
+  </script>
 </head>
 <body onkeyup="if(event.keyCode=='27'){ window.location.href='<%= logout_sessions_path %>' };">
 	<div id="fixedframe">
@@ -22,3 +25,4 @@
 	</div>
 </body>
 </html>
+                    

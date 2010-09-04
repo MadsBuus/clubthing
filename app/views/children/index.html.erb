@@ -13,7 +13,7 @@
   <tr>
     <td><%= link_to h(child.name), child %></td>
 		<td><%= mail_to child.email %>
-    <td><%=h child.klass.display %></td>
+    <td><%= link_to child.klass.display, klass_path(child.klass) %></td>
     <td><%= link_to 'Ret', edit_child_path(child) %></td>
     <td><%= link_to 'Slet', child, :confirm => 'Er du sikker på du vil slette (alle konti m.v. slettes)?', :method => :delete %></td>
   </tr>

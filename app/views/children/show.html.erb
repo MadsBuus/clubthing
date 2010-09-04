@@ -1,9 +1,10 @@
 <div id="banner">
 	<%= render :partial => 'finder' %>
 	<h1>
-		<%= @child.name %> (<%= @child.klass.display %>)
-		<%= link_to ">>", children_path %>		
-	</h1>
+		<%= @child.name %> (<%= link_to @child.klass.display, klass_path(@child.klass) %>)
+	<%= link_to "ret", edit_child_path(@child) %>
+	<%= link_to "slet", child_path(@child), :method => :delete, :confirm => 'Bekæft sletning' %> 
+	<%= link_to "liste", children_path %>		
 </div>
 
 <% @child.accounts(:order => 'account_type_id', :include => :account_type).each do |account| %>

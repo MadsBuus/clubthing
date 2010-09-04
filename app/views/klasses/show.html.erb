@@ -1,6 +1,6 @@
 <h1><%= @klass.display %></h1>
 <h2>Årgang <%= @klass.startyear %></h2>
-<%= @klass.children.count %> elev(er)
+<%= pluralize @klass.children.count, "elev", "elever" %>
 
 <ul>
 <% @klass.children.each do |pupil| %>
@@ -9,8 +9,8 @@
 	</li>
 <% end -%>
 </ul>
-<%= link_to 'Opret barn', new_klass_child_path(@klass) %> |
+<%= link_to 'Opret barn...', new_klass_child_path(@klass) %> |
 
 
-<%= link_to 'Ret', edit_klass_path(@klass) %> |
-<%= link_to 'Tilbage', klasses_path %>
+<%= link_to 'Ret klasse', edit_klass_path(@klass) %> |
+<%= link_to 'Klasser', klasses_path %>

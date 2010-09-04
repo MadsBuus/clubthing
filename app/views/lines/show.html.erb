@@ -11,8 +11,8 @@ Beløb: <%= @line.amount %>,-<br/><br/>
 Klubbens underskrift : ____________________________________<br/>
 <br/>
 
-<script type="text/javascript">
-	window.print();
+<script type="text/javascript"> 
+  document.observe("dom:loaded", function() { window.print() });                        
 </script>
 
 <hr/>

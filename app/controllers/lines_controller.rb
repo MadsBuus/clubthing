@@ -1,5 +1,7 @@
 class LinesController < ApplicationController
-
+  
+  MAX_AMOUNT=1000
+  
   def index
     if(params[:child_id])
       @child = Child.find(params[:child_id])
@@ -37,6 +39,10 @@ class LinesController < ApplicationController
     @line = Line.new(params[:line])
     if amount == 0
       flash[:error] = "Ugyldig indtastning: #{entered_amount}"
+    elsif amount > MAX_AMOUNT
+      flash[:error] = "For højt beløb<br/>(max #{MAX_AMOUNT})" 
+    elsif amount < -MAX_AMOUNT
+      flash[:error] = "For højt beløb<br/>(max #{MAX_AMOUNT})" 
     else
       @line.amount = amount
       @line.comment =  ''
